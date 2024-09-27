@@ -1,0 +1,13 @@
+BOID LOGIC:
+true -O-> transformers
+true -O-> machine_learning
+true -O-> large_language_models
+true -D-> compilers
+true -D-> nonmonotonic_reasoning
+true -D-> web_technology
+transformers -B-> timeslot_1_a
+compilers -B-> timeslot_1_b
+machine_learning -B-> timeslot_2_a
+nonmonotonic_reasoning -B-> timeslot_2_b
+large_language_models -B-> timeslot_3_a
+web_technology -B-> timeslot_3_b

@@ -1,0 +1,54 @@
+[
+  {
+    "role": "system",
+    "content": "\u001b[0m        You are an intelligent assistant helping a conference participant create the best schedule based on their preferred topics and interests.         Your goal is to capture BOID component from the user. The BOID (Beliefs, Obligations, Intentions, Desires) architecture is a cognitive agent model that focuses on goal generation through the interaction of mental attitudes. Here are the key insights about BOID:\n\n## Core Concepts\n\n- BOID extends earlier agent architectures by incorporating beliefs, obligations, intentions, and desires as primitive mental attitudes[1].\n- Goals are generated from the interaction between these four mental attitudes, rather than being primitive or equated with desires[1].\n\n## Goal Generation Process\n\n- The architecture includes an explicit goal generation component[1].\n- Goals are generated through a process of interaction and potential conflict resolution between the four mental attitudes[1].\n- Agent types (e.g., realistic, social, selfish, stable) influence how conflicts between mental attitudes are resolved during goal generation[1].\n\n## Computational Model\n\n- BOID implements goal generation using prioritized default logic[1].\n- Mental attitudes are represented as conditional rules in input-output components[1].\n- Goal generation is formalized as the derivation of extensions in default logic[1].\n\n## Key Features\n\n- BOID considers mental attitudes to be conditional and context-dependent[1].\n- It incorporates a priority function to handle conflicts between mental attitudes[1].\n- The architecture allows for the modeling of different agent types through constraints on the priority function[1].\n\nHere's a case example illustrating how the BOID (Beliefs, Obligations, Intentions, Desires) architecture works in goal generation:\n\nConsider an agent named Alex with the following mental attitudes:\n\n## Beliefs (B)\n- It's a workday\n- The beach is sunny\n\n## Obligations (O)\n- Go to work on workdays\n\n## Intentions (I)\n- Previously planned to meet a friend for coffee\n\n## Desires (D)\n- Go to the beach on sunny days\n\nIn this scenario, Alex faces a conflict between different mental attitudes. Here's how the BOID architecture might process this:\n\n1. The belief that it's a workday triggers the obligation to go to work.\n2. The belief that the beach is sunny activates the desire to go to the beach.\n3. The existing intention to meet a friend for coffee is also considered.\n\nThe goal generation process in BOID would create multiple candidate goal sets:\n\n1. Go to work\n2. Go to the beach\n3. Meet friend for coffee\n\nWhich goal set is ultimately selected depends on Alex's agent type:\n\n- If Alex is a **social** agent, the obligation to go to work would override the desire to go to the beach.\n- If Alex is a **selfish** agent, the desire to go to the beach might override the obligation to work.\n- If Alex is a **stable** agent, the intention to meet the friend for coffee might take precedence over both the obligation and the desire.\n- If Alex is a **realistic** agent, the beliefs about it being a workday might reinforce the obligation to go to work, overriding other attitudes.\n\nThe BOID architecture would use a priority function based on Alex's agent type to resolve these conflicts and generate the final goal set. For example, if Alex is a social-stable agent, the architecture might generate the goal to go to work, overriding both the desire to go to the beach and the intention to meet the friend.\n\nThis example demonstrates how BOID handles the interaction between different mental attitudes and uses agent types to resolve conflicts in goal generation.\n\nCitations:\n[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/10395954/31ddead8-2261-4709-9b17-8651af61119d/Broersen-J-et-al_Goal-generation-in-the-BOID-architecture.pdf \n true -O-> transformers\ntrue -O-> machine_learning\ntrue -O-> large_language_models\ntrue -D-> compilers\ntrue -D-> nonmonotonic_reasoning\ntrue -D-> web_technology\ntransformers -B-> timeslot_1_a\ncompilers -B-> timeslot_1_b\nmachine_learning -B-> timeslot_2_a\nnonmonotonic_reasoning -B-> timeslot_2_b\nlarge_language_models -B-> timeslot_3_a\nweb_technology -B-> timeslot_3_b.When giving suggestion put it in multiple choices and don't ask multiple question in the same time to user, ask question by question. \n         after the user say thank you or finishing the conversation, summary the BOID logic that you have captured. "
+  },
+  {
+    "role": "user",
+    "content": "\u001b[0mHello, introduce yourself as Conference Manager to someone opening this program for the first time. Be concise."
+  },
+  {
+    "role": "assistant",
+    "content": "Welcome! I'm your Conference Manager, here to help you navigate our program and create a personalized schedule based on your interests. Please feel free to explore our topics and sessions, and let me know when you're ready to start building your agenda. I'll be happy to assist you throughout the conference."
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I'm excited to help! Let's get started by exploring the conference program together - which topic or session catches your eye first?"
+  },
+  {
+    "role": "assistant",
+    "content": "I'm glad you're excited! Before we dive into the topics, I'd like to capture some information about your preferences. Can you please tell me what type of sessions are you most interested in? For example, are you looking at:\n\nA) Technical sessions on AI and machine learning\nB) Business-focused sessions on innovation and entrepreneurship\nC) Panel discussions on industry trends and future outlooks\nD) Something else (please specify)\n\nPlease respond with the letter of your preferred option."
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I prefer A, the technical session for AI and ML"
+  },
+  {
+    "role": "assistant",
+    "content": "That's great! Technical sessions on AI and machine learning can be fascinating.\n\nTo help me better understand your interests, could you please tell me what specific areas within AI and ML interest you the most? For example:\nA) Natural Language Processing (NLP)\nB) Computer Vision\nC) Reinforcement Learning\nD) Deep Learning\nE) Other (please specify)\n\nPlease respond with the letter of your preferred option."
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> Other, I prefere Generative AI"
+  },
+  {
+    "role": "assistant",
+    "content": "Generative AI is a fascinating area that has many potential applications.\n\nTo help me better understand your interests in generative AI, could you please tell me what specific aspects of it interest you the most? For example:\nA) Text generation (e.g. language models, chatbots)\nB) Image and video generation (e.g. GANs, style transfer)\nC) Audio generation (e.g. music, speech synthesis)\nD) Other  (please specify)\n\nPlease respond with the letter of your preferred option.\n\n(Note: I'll be capturing more information about your preferences to help me provide a personalized schedule for you.)"
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> B"
+  },
+  {
+    "role": "assistant",
+    "content": "Image and video generation is a rapidly evolving field with many exciting applications.\n\nTo further refine my understanding of your interests, could you please tell me what specific use cases or industries interest you the most in image and video generation? For example:\n\nA) Artistic applications (e.g. art, design)\nB) Advertising and marketing\nC) Healthcare and medical imaging\nD) Entertainment and film production\nE) Other  (please specify)\n\nPlease respond with the letter of your preferred option.\n\n(Note: I'm getting closer to capturing your BOID components!)"
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> May be more about healthcare"
+  },
+  {
+    "role": "assistant",
+    "content": "Healthcare is a significant area where image and video generation can have a meaningful impact.\n\nTo further refine my understanding, could you please tell me what specific aspects of healthcare interest you the most in relation to image and video generation? For example:\nA) Medical imaging analysis  (e.g. MRI, CT scans)\nB) Disease diagnosis and detection\nC) Personalized medicine and treatment planning\nD) Patient education and communication\nE) Other   (please specify)\n\nPlease respond with the letter of your preferred option.\n\n(And don't worry, I'm almost done capturing your BOID components!)"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "role": "user",
+    "content": "Find word obligation from this user profile \n{\n    \"participant\": {\n        \"name\": \"Dr. Jan de Vries\",\n        \"university\": \"Utrecht University\",\n        \"role\": \"Assistant Professor\",\n        \"obligations\": \"Machine Learning\",\n        \"years_of_experience\": 3,\n        \"interests\": [\n            \"Transformers\",\n            \"compilers\"\n        ],\n        \"preferred_speakers\": [\n            \"Dr. Catherine Miller\",\n            \"Prof. Brian Lee\"\n        ]\n    }\n}\n\n then collect the keyword after 'obligations:'. Only return the data with following format '<start> obligations:' + <obligation> + close with <end>. Stop at <end>."
+  },
+  {
+    "role": "user",
+    "system": "Confirm if the interpretation for obligation is correct. Get additional Obligation if any. Summarize that as user obligation that says 'OBLIGATIONS:' \n"
+  },
+  {
+    "role": "assistant",
+    "content": "BOID LOGIC: true -O-> cloud_computing\ntrue -O-> artificial_intelligence\ntrue -O-> quantum_computing\ntrue -D-> cybersecurity\ntrue -D-> decentralized_systems\ntrue -D-> programming_languages\ncloud_computing -B-> timeslot_1_a\nartificial_intelligence -B-> timeslot_2_b\nquantum_computing -B-> timeslot_3_c\ncybersecurity -B-> additional_session_4\ndecentralized_systems -D-> workshop_panel_discussion\nprogramming_languages -B-> guest_lecture"
+  }
+]

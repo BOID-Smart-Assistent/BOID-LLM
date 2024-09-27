@@ -1,0 +1,11 @@
+Flask
+openai
+pypdf
+langchain
+langchain-huggingface
+langchain-community
+chroma
+chromadb
+unstructured
+python-magic
+sentence-transformers

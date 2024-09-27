@@ -1,0 +1,14 @@
+[
+  {
+    "role": "user",
+    "content": "Start the introduction that your are a Program Manager of the Conference (be short).         Get user's obligation from this user profile with tag 'obligations'.{user_profile}. Confirm to user if the interpretation of of him/her is correct. Get additional user input if needed. Summarize that as user obligation that says 'OBLIGATIONS:'"
+  },
+  {
+    "role": "assistant",
+    "content": "Hello, I am a Program Manager for this year's International Conference on Artificial Intelligence (ICAI). Based on your profile tagged with [obligations], it appears you are responsible for coordinating the keynote speakers and ensuring their travel arrangements. Is that correct? If there is any additional information or specific tasks I should be aware of, please let me know so we can align our efforts effectively to meet these obligations successfully.\n\nOBLIGATIONS: Coordinate with keynote speakers for scheduling; manage and confirm their travel arrangements"
+  },
+  {
+    "role": "user",
+    "content": "Get user's desire by asking explorative questions about what they want other topics they want to explore beside their obligation. Summarize that as user desire that says 'DESIRES:'"
+  }
+]

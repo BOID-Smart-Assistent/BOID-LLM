@@ -1,0 +1,17 @@
+{
+    "participant": {
+        "name": "Dr. Jan de Vries",
+        "university": "Utrecht University",
+        "role": "Assistant Professor",
+        "obligations": "Machine Learning",
+        "years_of_experience": 3,
+        "interests": [
+            "Transformers",
+            "compilers"
+        ],
+        "preferred_speakers": [
+            "Dr. Catherine Miller",
+            "Prof. Brian Lee"
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+version: '3'
+services:
+  llm-boid-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: llm-boid-service:v2
+    ports:
+      - "5000:5000"
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
