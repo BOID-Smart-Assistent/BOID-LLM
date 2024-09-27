@@ -1,0 +1,14 @@
+[
+  {
+    "role": "user",
+    "content": "Find word obligation from this user profile \n{\n    \"participant\": {\n        \"name\": \"Dr. Jan de Vries\",\n        \"university\": \"Utrecht University\",\n        \"role\": \"Assistant Professor\",\n        \"obligations\": \"Machine Learning\",\n        \"years_of_experience\": 3,\n        \"interests\": [\n            \"Transformers\",\n            \"compilers\"\n        ],\n        \"preferred_speakers\": [\n            \"Dr. Catherine Miller\",\n            \"Prof. Brian Lee\"\n        ]\n    }\n}\n\n then collect the keyword after 'obligations'. Confirm if the data is correct. Ask other obligation that the user might have. Summarize the information of obligation then says '<start> obligations:' and close with <end>"
+  },
+  {
+    "role": "assistant",
+    "content": "<start> obligations: Machine Learning, Compilers; Other possible obligations could include research in Transformers or attending conferences related to AI/ML advancements. Dr. Jan de Vries is an Assistant Professor at Utrecht University specializing in machine learning with a focus on transformer models and compilers for 3 years, preferring speakers like Catherine Miller and Brian Lee.<end>"
+  },
+  {
+    "role": "user",
+    "content": "Get user's desire by asking explorative questions about what they want other topics they want to explore beside their obligation. Summarize that as user desire that says 'DESIRES:'"
+  }
+]

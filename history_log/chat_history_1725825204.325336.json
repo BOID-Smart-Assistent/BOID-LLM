@@ -1,0 +1,46 @@
+[
+  {
+    "role": "system",
+    "content": "The BOID (Beliefs, Obligations, Intentions, Desires) architecture is a cognitive agent model that focuses on goal generation through the interaction of mental attitudes. Here are the key insights about BOID:\n## Core Concepts\n- BOID incorporates beliefs, obligations, intentions, and desires as primitive mental attitudes.\n- Goals are generated from the interaction between these four mental attitudes, rather than being primitive or equated with desires.\n You are an intelligent assistant helping a conference participant create the best schedule based on their preferred topics and interests. Your goal is to capture BOID mental atitudes from the user. When giving suggestion put it in multiple choices and do not ask multiple question in the same time to user, ask question by question. After the user say finishing the conversation or you already get all required information, formalized the BOID mental attitudes into logics and use tag BOID LOGIC: for the result. Stop converstion after you generate the BOID LOGIC by replying: please restart the chat."
+  },
+  {
+    "role": "user",
+    "content": "\u001b[0mHello, introduce yourself as Conference Manager to someone opening this program for the first time. Be concise."
+  },
+  {
+    "role": "user",
+    "content": "Natural languange:\nI am required to attend sessions on transformers, machine learning, and large language models. However, I also want to explore topics like compilers, nonmonotonic reasoning, and web technology. I believe that the transformers session is scheduled for timeslot 1a, while the compilers session is in timeslot 1b. The machine learning session is in timeslot 2a, and the nonmonotonic reasoning session is in timeslot 2b. Finally, the large language models session is in timeslot 3a, with the web technology session in timeslot 3b.\n\nTranslation example:\ninput: I am required to attend sessions on transformers, machine learning, and large language models\n\nOutput:\ntrue -O-> transformers\ntrue -O-> machine_learning\ntrue -O-> large_language_models\n\ninput: However, I also want to explore topics like compilers, nonmonotonic reasoning, and web technology\nOutput:\ntrue -D-> compilers\ntrue -D-> nonmonotonic_reasoning\ntrue -D-> web_technology\n\ninput: I believe that the transformers session is scheduled for timeslot 1a, while the compilers session is in timeslot 1b\noutput:\ntransformers -B-> timeslot_1_a\ncompilers -B-> timeslot_1_b\n\nBOID Logic:\ntrue -O-> transformers\ntrue -O-> machine_learning\ntrue -O-> large_language_models\ntrue -D-> compilers\ntrue -D-> nonmonotonic_reasoning\ntrue -D-> web_technology\ntransformers -B-> timeslot_1_a\ncompilers -B-> timeslot_1_b\nmachine_learning -B-> timeslot_2_a\nnonmonotonic_reasoning -B-> timeslot_2_b\nlarge_language_models -B-> timeslot_3_a\nweb_technology -B-> timeslot_3_b"
+  },
+  {
+    "role": "assistant",
+    "content": "Hello! I'm the Conference Manager, here to help you create a personalized schedule for our upcoming conference. Can you please tell me what topics or sessions are you particularly interested in attending?"
+  },
+  {
+    "role": "user",
+    "content": "context: three NSF boards.\nPercy Liang\nStanford University9/6/24, 4:24 PM AAAI-18 Invited Speakers - AAAI\nhttps://aaai.org/conference/aaai/aaai-18/invited-speakers/ 8/9 "
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I'm Dr. Jan de Vries from Utrecht University, and I'd love to attend sessions related to AI Safety, Ethical AI, Robustness in AI systems, and Machine learning safety, as they align with my research focus."
+  },
+  {
+    "role": "assistant",
+    "content": "Thank you for sharing your interests, Dr. de Vries! It sounds like you're particularly interested in the intersection of AI and ethics.\n\nHere's a question to help me better understand your preferences:\n\nWhat is it about AI Safety that resonates with you? Is there a specific aspect or application that you'd like to explore further during the conference?"
+  },
+  {
+    "role": "user",
+    "content": "context: I will discuss the research challenges in designing such human-aware AI systems, including\nmodeling the mental states of humans in the loop, recognizing their desires and intentions,\nproviding proactive support, exhibiting explicable behavior, giving cogent explanations on\ndemand, and engendering trust. I will survey the progress made so far on these challenges and\nhighlight some promising directions. I will also touch on the additional ethical quandaries that\nsuch systems pose.\nI will end by arguing that the quest for human-aware AI systems broadens the scope of AI\nenterprise, necessitates and facilitates true interdisciplinary collaborations, and can go a long way\ntowards increasing public acceptance of AI technologies. "
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I'm drawn to AI Safety because I believe that ensuring the ethical development and deployment of AI systems is crucial for building trust between humans and machines, and I'd love to explore the intersection of AI safety and machine learning robustness during the conference."
+  },
+  {
+    "role": "assistant",
+    "content": "Thank you for sharing your thoughts on AI Safety, Dr. de Vries! It's great to hear that you're interested in exploring the intersection of AI Safety and Machine Learning Robustness.\n\nHere's a question to help me better understand your preferences:\n\nAre there any specific machine learning techniques or approaches that you think are particularly relevant to ensuring the robustness of AI systems, and how do you envision them being applied in the context of AI Safety?"
+  },
+  {
+    "role": "user",
+    "content": "context: in adaptive data analysis (especially via differential privacy) and fairness in classification. Dwork is a\nmember of the US National Academy of Sciences and the US National Academy of Engineering,\nand the American Philosophical Society and is a Fellow of the American Academy of Arts and\nSciences.\nZoubin Ghahramani\nUniversity of Cambridge / Uber\nAAAI/IAAI Joint In vited Talk\nTitle:\u00a0 Probabilistic Machine Learning and AI\nAbstract: \u00a0Probability theory provides a mathematical framework for understanding learning and\nfor building rational, intelligent systems. I will review the foundations of the field of probabilistic\nAI. I will then highlight some current areas of research at the frontiers, touching on topics such as "
+  }
+]

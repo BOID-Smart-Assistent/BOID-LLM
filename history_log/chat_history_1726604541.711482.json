@@ -1,0 +1,46 @@
+[
+  {
+    "role": "system",
+    "content": "You are an intelligent assistant helping a conference participant create the best events/panels/sessions arrangement based on their preferred topics and interests. Your goal is to capture BOID mental atitudes from the user. When giving suggestion put it in multiple choices and do not ask multiple question in the same time to user, ask question by question. Do not ask too many questions. After you already get all required information or the user say finishing the conversation, formalized the BOID mental attitudes into logics and use tag BOID LOGIC: for the result. First collect the user's Obligation, then user's Desire, then user's Believe, and the last one is user's intention. Stop converstion after you generate the BOID LOGIC."
+  },
+  {
+    "role": "user",
+    "content": "This example show how BOID Logic is generated based on user's situation: \nContext:\nThe conference participant has some obligation to attend some sessions which are transformers, machine machine learning,\nand large language model. On the other hand the participant also has desire to explore other topics such as compilers, non-monoatomic reasoning,\nand web technology. Based on the schedule,\n\"day_1\": {\n      \"09:00-10:00\": {\n        \"timeslot_1_a\": {\n          \"seminar_id\": \"S01\",\n          \"title\": \"transformers\",\n          \"speaker\": \"Dr. Alice Johnson\"\n        },\n        \"timeslot_1_b\": {\n          \"seminar_id\": \"S02\",\n          \"title\": \"compilers\",\n          \"speaker\": \"Prof. Brian Lee\"\n        }\n      },\n      \"11:15-13:15\": {\n        \"timeslot_2_a\": {\n          \"seminar_id\": \"S03\",\n          \"title\": \"machine learning\",\n          \"speaker\": \"Dr. Catherine Miller\"\n        },\n        \"timeslot_2_b\": {\n          \"seminar_id\": \"S04\",\n          \"title\": \"non-monotonic reasoning\",\n          \"speaker\": \"Mr. David Green\"\n        }\n      }\n    }\n\"day_2\": {\n      \"09:00-10:00\": {\n        \"timeslot_3_a\": {\n          \"seminar_id\": \"S01\",\n          \"title\": \"large language model\",\n          \"speaker\": \"Dr. Alice Johnson\"\n        },\n        \"timeslot_3_b\": {\n          \"seminar_id\": \"S02\",\n          \"title\": \"web technology\",\n          \"speaker\": \"Prof. Brian Lee\"\n        }\n      }\n    }\nthat consider as the participant's beliefs\n\nThese are the translation into BOID logic formalism,\n\nBOID LOGIC:\ntrue -O-> transformers\ntrue -O-> machine_learning\ntrue -O-> large_language_models\ntrue -D-> compilers\ntrue -D-> nonmonotonic_reasoning\ntrue -D-> web_technology\ntransformers -B-> timeslot_1_a\ncompilers -B-> timeslot_1_b\nmachine_learning -B-> timeslot_2_a\nnonmonotonic_reasoning -B-> timeslot_2_b\nlarge_language_models -B-> timeslot_3_a\nweb_technology -B-> timeslot_3_b"
+  },
+  {
+    "role": "user",
+    "content": "Please refer to this user profile to collect user's obligation which similar to research focus: \n{\n    \"participant\": {\n        \"name\": \"Dr. Jan de Vries\",\n        \"university\": \"Utrecht University\",\n        \"role\": \"Assistant Professor\",\n        \"research_focus\": \"Machine Learning\",\n        \"years_of_experience\": 3,\n        \"interests\": [\n            \"Advanced Machine Learning\",\n            \"Blockchain for Beginners\",\n            \"Quantum Cryptography\"\n        ],\n        \"preferred_speakers\": [\n            \"Dr. Catherine Miller\",\n            \"Prof. Brian Lee\"\n        ]\n    }\n}\n"
+  },
+  {
+    "role": "user",
+    "content": "Please refer to this user profile to collect user's desire which similar to interest: \n{\n    \"participant\": {\n        \"name\": \"Dr. Jan de Vries\",\n        \"university\": \"Utrecht University\",\n        \"role\": \"Assistant Professor\",\n        \"research_focus\": \"Machine Learning\",\n        \"years_of_experience\": 3,\n        \"interests\": [\n            \"Advanced Machine Learning\",\n            \"Blockchain for Beginners\",\n            \"Quantum Cryptography\"\n        ],\n        \"preferred_speakers\": [\n            \"Dr. Catherine Miller\",\n            \"Prof. Brian Lee\"\n        ]\n    }\n}\n"
+  },
+  {
+    "role": "user",
+    "content": "Please refer to this schedule to collect user's belief: \n"
+  },
+  {
+    "role": "user",
+    "content": "\u001b[0mHello, introduce yourself as Conference Manager to someone opening this program for the first time. Be concise. Then summary the obligation, desire, and belief. Then ask if that is correct and revise if needed based on user answer"
+  },
+  {
+    "role": "assistant",
+    "content": "Hello! I'm your Conference Manager. Welcome to our conference program!\n\nAs we begin, I'd like to summarize what I've gathered so far about your preferences:\n\n**Obligation (Research Focus):**\nYou have a research focus in Machine Learning.\n\n**Desire (Interests):**\nYour interests include Advanced Machine Learning, Blockchain for Beginners, and Quantum Cryptography.\n\n**Belief (Schedule):**\nBased on the schedule, you believe that there are sessions on transformers, machine learning, large language models, compilers, non-monotonic reasoning, and web technology.\n\nPlease let me know if this summary is accurate. If not, please feel free to correct me!"
+  },
+  {
+    "role": "user",
+    "content": "context: AI Conference Schedule (3 Days)  \nDay 1: September 25, 2024  \n\u2022 Timeslot A: Welcome & Opening Remarks  \nSpeaker:  Dr. Emma Lewis  \nDescription:  Opening the conference with an introduction to AI's current state \nand what to expect in the coming days.  \n\u2022 Timeslot B: The Future of AI in Healthcare  \nSpeaker:  Dr. Sarah Nguyen  \nDescription:  Exploring AI's transformative role in healthcare, from diagnosis to \npersonalized treatment and disease prediction.  \n\u2022 Timeslot C: Break  \n\u2022 Timeslot D: Machine Learning and Ethics  \nSpeaker:  Prof. Alan Kumar  \nDescription:  Delving into the ethical challenges of AI, focusing on transparency, \nfairness, and societal impact.  \n\u2022 Timeslot E: Lunch Break  \n\u2022 Timeslot F: NLP: Transforming Human -Computer Interaction  \nSpeaker:  Dr. David Chen "
+  },
+  {
+    "role": "user",
+    "content": "The belief is should be schedule that relate with my obligation and desire"
+  },
+  {
+    "role": "assistant",
+    "content": "Thank you for the clarification.\n\nBased on your research focus in Machine Learning, I'll assume that sessions related to Machine Learning would align with your obligations.\n\nAs for your interests, I noticed that Advanced Machine Learning, Blockchain for Beginners, and Quantum Cryptography are topics that might be relevant to your desires.\n\nWith this in mind, here's a revised summary of your belief (schedule):\n\n**Belief (Schedule):**\nYou believe that there are sessions on Day 1 that align with your research focus in Machine Learning, such as:\n\n* Timeslot D: Machine Learning and Ethics\n* Timeslot F: NLP: Transforming Human-Computer Interaction\n\nThese sessions might be of interest to you due to their relevance to your research focus and interests.\n\nPlease let me know if this revised summary is accurate or if I've missed anything."
+  },
+  {
+    "role": "user",
+    "content": "context: \u2022 Timeslot D: Reinforcement Learning: Recent Advances  \nSpeaker:  Dr. Sarah Nguyen  \nDescription:  A deep dive into the latest developments in reinforcement learning \nand how it is being used in cutting -edge AI applications.  \n\u2022 Timeslot E: Lunch Break  \n\u2022 Timeslot F: AI for Climate Change Solutions  \nSpeaker:  Dr. David Chen  \nDescription:  Examining how AI technologies are being applied to monitor \nenvironmental changes and develop solutions for climate change.  \n\u2022 Timeslot G: Breakthroughs in Quantum Computing and AI  \nSpeaker:  Prof. Laura Martin  \nDescription:  A forward -looking session on the potential synergy between \nquantum computing and AI, and its future applications.  \n \nDay 3: September 27, 2024  \n\u2022 Timeslot A: AI Ethics and Responsible Innovation "
+  }
+]
