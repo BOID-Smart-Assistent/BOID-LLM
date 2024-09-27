@@ -2,5 +2,5 @@ llm_helper*
 main*
 sandbox*
 personal_notes*
-chat_history_*	
+history_log/*	
 debug.txt
