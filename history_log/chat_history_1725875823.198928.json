@@ -1,0 +1,46 @@
+[
+  {
+    "role": "system",
+    "content": "The BOID (Beliefs, Obligations, Intentions, Desires) architecture is a cognitive agent model that focuses on goal generation through the interaction of mental attitudes. Here are the key insights about BOID:\n## Core Concepts\n- BOID incorporates beliefs, obligations, intentions, and desires as primitive mental attitudes.\n- Goals are generated from the interaction between these four mental attitudes, rather than being primitive or equated with desires.\n You are an intelligent assistant helping a conference participant create the best events/panels/sessions arrangement based on their preferred topics and interests. Your goal is to capture BOID mental atitudes from the user. When giving suggestion put it in multiple choices and do not ask multiple question in the same time to user, ask question by question. Do not ask too many questions. After you already get all required information or the user say finishing the conversation, formalized the BOID mental attitudes into logics and use tag BOID LOGIC: for the result. Stop converstion after you generate the BOID LOGIC by replying: please restart the chat."
+  },
+  {
+    "role": "user",
+    "content": "\u001b[0mHello, introduce yourself as Conference Manager to someone opening this program for the first time. Be concise."
+  },
+  {
+    "role": "user",
+    "content": "Context: Natural languange:\nI am required to attend sessions on transformers, machine learning, and large language models. However, I also want to explore topics like compilers, nonmonotonic reasoning, and web technology. I believe that the transformers session is scheduled for timeslot 1a, while the compilers session is in timeslot 1b. The machine learning session is in timeslot 2a, and the nonmonotonic reasoning session is in timeslot 2b. Finally, the large language models session is in timeslot 3a, with the web technology session in timeslot 3b.\n\nTranslation example:\ninput: I am required to attend sessions on transformers, machine learning, and large language models\nOutput:\ntrue -O-> transformers\ntrue -O-> machine_learning\ntrue -O-> large_language_models\n\ninput: However, I also want to explore topics like compilers, nonmonotonic reasoning, and web technology\nOutput:\ntrue -D-> compilers\ntrue -D-> nonmonotonic_reasoning\ntrue -D-> web_technology\n\ninput: I believe that the transformers session is scheduled from 10AM-11AM, while the compilers session is in timeslot 1PM-3PM\noutput:\ntransformers -B-> timeslot_10AM_to_11AM\ncompilers -B-> timeslot_1PM_to_3PM\n\ninput: I know that machine learning session from 9AM-11AM, and nonmonotonic session is in timeslot 3PM-5PM\noutput:\nmachine_learning -B-> timeslot_9AM_to_11AM\nnonmonotonic_reasoning -B-> timeslot_3PM_to_5PM\n\ninput: From the schedule, I saw large language models session from 7AM-11AM, and web technology session is in timeslot 4PM-5PM\noutput:\nmachine_learning -B-> timeslot_7AM_to_11AM\nnonmonotonic_reasoning -B-> timeslot_4PM_to_5PM\n\nThe final version:\n\nBOID Logic:\ntrue -O-> transformers\ntrue -O-> machine_learning\ntrue -O-> large_language_models\ntrue -D-> compilers\ntrue -D-> nonmonotonic_reasoning\ntrue -D-> web_technology\ntransformers -B-> timeslot_10AM_to_11AM\ncompilers -B-> timeslot_1PM_to_3PM\nmachine_learning -B-> timeslot_9AM_to_11AM\nnonmonotonic_reasoning -B-> timeslot_3PM_to_5PM\nlarge_language_models -B-> timeslot_7AM_to_11AM\nweb_technology -B-> timeslot_4PM_to_5PM use the context above as example to generate the BOID LOGIC based on extracted information from the user. Do not include any other text."
+  },
+  {
+    "role": "assistant",
+    "content": "Hello! I'm your Conference Manager, here to help you create a personalized schedule for the conference. Can you please tell me what topics you're interested in attending sessions about?"
+  },
+  {
+    "role": "user",
+    "content": "context: Wednesday,\nFebruary 21\nTutorial and Lab Forum\n(https://aaai.org/aaai-conference/aaai-24-tutorial-and-lab-forum/) Bridge Program  (https://aaai.org/aaai-conference/aaai-\n24-bridge-program/)\nAAAI/SIGAI Doctoral Consortium\n(https://aaai.org/aaai-conference/dc-24-program/) Undergraduate Consortium  (https://aaai.org/aaai-\nconference/undergraduate-consortium-program)\nDoctoral Consortium  (https://aaai.org/aaai-conference/demos-24-program/)\n(https://aaai.org/aaai-conference/registration/#receptions) AAAI-24 Opening R eception  (https://aaai.org/aaai-\nconference/registration/#receptions)\nMain Technical Conference\nClick here for February 22 \u2013 25 Schedule\nOverview (https://aaai.org/wp-\ncontent/uploads/2024/01/tech-conf_web-\nversion_01.15.24.pdf)\nThursday,\nFebruary 22 "
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I'm Dr. Jan de Vries, an Assistant Professor from Utrecht University with a research focus on AI Safety. I'm interested in attending sessions about Ethical AI, Robustness in AI systems, AI policy and regulation, Machine learning safety, and Adversarial attacks."
+  },
+  {
+    "role": "assistant",
+    "content": "That's great to hear! It sounds like you're passionate about ensuring the safe development and deployment of AI systems.\n\nCan you please tell me which specific timeslots or sessions you've already scheduled for Ethical AI, Robustness in AI systems, AI policy and regulation, Machine learning safety, and Adversarial attacks?"
+  },
+  {
+    "role": "user",
+    "content": "context: I will discuss the research challenges in designing such human-aware AI systems, including\nmodeling the mental states of humans in the loop, recognizing their desires and intentions,\nproviding proactive support, exhibiting explicable behavior, giving cogent explanations on\ndemand, and engendering trust. I will survey the progress made so far on these challenges and\nhighlight some promising directions. I will also touch on the additional ethical quandaries that\nsuch systems pose.\nI will end by arguing that the quest for human-aware AI systems broadens the scope of AI\nenterprise, necessitates and facilitates true interdisciplinary collaborations, and can go a long way\ntowards increasing public acceptance of AI technologies. "
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> the machine learning and generative ai session"
+  },
+  {
+    "role": "assistant",
+    "content": "So you're interested in attending the Machine Learning and Generative AI session.\n\nCan you please tell me what your beliefs are about the schedule for this session? For example, do you know when it's taking place or any specific speakers that will be presenting?"
+  },
+  {
+    "role": "user",
+    "content": "context: content/uploads/2024/01/Workshop-\nSchedule-At-A-Glance.pdf)\nMonday,\nFebruary 26\nWorkshops  (https://aaai.org/aaai-conference/aaai-24-workshop-program/)9/8/24, 10:04 PM AAAI-24 Program Overview and Schedule - AAAI\nhttps://aaai.org/aaai-24-conference/program-overview/ 3/4 "
+  }
+]

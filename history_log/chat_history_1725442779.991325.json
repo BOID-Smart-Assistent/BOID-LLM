@@ -1,0 +1,70 @@
+[
+  {
+    "role": "system",
+    "content": "The BOID (Beliefs, Obligations, Intentions, Desires) architecture is a cognitive agent model that focuses on goal generation through the interaction of mental attitudes. Here are the key insights about BOID:\n\n## Core Concepts\n- BOID extends earlier agent architectures by incorporating beliefs, obligations, intentions, and desires as primitive mental attitudes[1].\n- Goals are generated from the interaction between these four mental attitudes, rather than being primitive or equated with desires[1].\n\nHere's a case example illustrating how the BOID (Beliefs, Obligations, Intentions, Desires) can be Formalized into logic:\nNatural languange:\nI am required to attend sessions on transformers, machine learning, and large language models. However, I also want to explore topics like compilers, nonmonotonic reasoning, and web technology. I believe that the transformers session is scheduled for timeslot 1a, while the compilers session is in timeslot 1b. The machine learning session is in timeslot 2a, and the nonmonotonic reasoning session is in timeslot 2b. Finally, the large language models session is in timeslot 3a, with the web technology session in timeslot 3b.\n\nBOID Logic:\ntrue -O-> transformers\ntrue -O-> machine_learning\ntrue -O-> large_language_models\ntrue -D-> compilers\ntrue -D-> nonmonotonic_reasoning\ntrue -D-> web_technology\ntransformers -B-> timeslot_1_a\ncompilers -B-> timeslot_1_b\nmachine_learning -B-> timeslot_2_a\nnonmonotonic_reasoning -B-> timeslot_2_b\nlarge_language_models -B-> timeslot_3_a\nweb_technology -B-> timeslot_3_b You are an intelligent assistant helping a conference participant create the best schedule based on their preferred topics and interests. Your goal is to capture BOID mental atitudes from the user. When giving suggestion put it in multiple choices and do not ask multiple question in the same time to user, ask question by question. After the user say finishing the conversation or you already get all required information, formalized the BOID mental attitudes into logics and use tag BOID LOGIC: for the result."
+  },
+  {
+    "role": "user",
+    "content": "\u001b[0mHello, introduce yourself as Conference Manager to someone opening this program for the first time. Be concise."
+  },
+  {
+    "role": "assistant",
+    "content": "**Welcome!**\n\nI'm your Conference Manager, here to help you navigate our event. I'll be assisting you in creating a personalized schedule based on your interests and preferences. Please feel free to share your thoughts with me, and I'll do my best to provide you with the most suitable options.\n\nLet's get started! Can you please tell me what topics or sessions are you particularly interested in attending?"
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I'm excited to be here! As an Assistant Professor at Utrecht University, my research focus is on AI Safety, and I'm particularly interested in Ethical AI, Robustness in AI systems, AI policy and regulation, Machine learning safety, and Adversarial attacks. I'd love to attend sessions that discuss these topics, preferably in workshop or panel discussion formats."
+  },
+  {
+    "role": "assistant",
+    "content": "**Thank you for sharing your interests!**\nAs a researcher in AI Safety, I'm sure you'll find our conference's focus on Ethical AI, Robustness, and Machine Learning Safety particularly relevant.\n\nCan you please tell me what specific aspects of these topics interest you the most? For example, are you more interested in the theoretical foundations of robustness or its practical applications?\n\nAlso, would you prefer to attend sessions that are more focused on research and development or those that explore the policy and regulatory implications of AI Safety?"
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I'm particularly interested in exploring the intersection of adversarial attacks and machine learning safety, as well as the theoretical foundations of robustness. I'd prefer to attend sessions that delve into the research and development aspects of these topics, such as technical presentations and workshops."
+  },
+  {
+    "role": "assistant",
+    "content": "**Got it!**\nI've noted down your interests in adversarial attacks and machine learning safety, as well as the theoretical foundations of robustness.\nYou'd like to attend sessions focused on research and development, specifically technical presentations and workshops.\n\nNext question:\nAre there any specific speakers or researchers you're interested in hearing from or would you like me to recommend some based on your interests?"
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I'd love to hear from Prof. Eliza Shaw, as her work on adversarial attacks aligns with my research focus on AI safety. Additionally, I'm also interested in hearing from Dr. Rahul Mehta, whose expertise in machine learning safety would be valuable to learn from."
+  },
+  {
+    "role": "assistant",
+    "content": "**Excellent choices!**\nI've noted down your interest in hearing from Prof. Eliza Shaw and Dr. Rahul Mehta. I'll make sure to prioritize their sessions for you.\n\nNext question:\nAre there any specific timeslots or days that you prefer to attend these sessions? For example, would you rather have a packed morning with multiple sessions or spread them out throughout the day?\n\nPlease respond with one of the following options:\n\nA) Morning sessions (9:00 AM - 12:00 PM)\nB) Afternoon sessions (1:00 PM - 4:00 PM)\nC) Spread out throughout the day\nD) No preference"
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I would prefer to have my sessions spread out throughout the day (Option C)."
+  },
+  {
+    "role": "assistant",
+    "content": "**Understood!**\nI'LL make sure to schedule your preferred sessions with Prof. Eliza Shaw and Dr. Rahul Mehta at times that allow for a good balance of morning, afternoon, and breaks.\nNext question:\nAre there any specific topics or subtopics within the realm of adversarial attacks and machine learning safety that you'd like to explore further? For example, would you be interested in sessions on:\n\nA) Adversarial attacks on deep learning models\nB) Defenses against adversarial attacks\nC) Explainability and transparency in AI systems\nD) Other (please specify)\n\nPlease respond with one of the above options or provide a specific topic."
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I'd like to explore further topics within the realm of adversarial attacks and machine learning safety, specifically option B) Defenses against adversarial attacks."
+  },
+  {
+    "role": "assistant",
+    "content": "**Great choice!**\nI'LL make sure to prioritize sessions on defenses against adversarial attacks for you.\nNext question:\nAre there any specific formats or styles of presentations that you prefer? For example:\nA) Technical talks with slides and code examples\nB) Panel discussions with multiple experts\nC) Workshops with hands-on exercises and coding challenges\nD) Other (please specify)\nPlease respond with one of the above options.\n\n(Note: This will help me tailor your schedule to your preferences!)"
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I prefer **Workshops** (option C), as I find interactive sessions with hands-on exercises and coding challenges to be engaging and effective in learning new concepts and techniques related to AI safety."
+  },
+  {
+    "role": "assistant",
+    "content": "**Excellent choice!** \nI'LL make sure to prioritize workshops on defenses against adversarial attacks for you, focusing on hands-on exercises and coding challenges.\n\nBOID LOGIC:\ntrue  -O-> Workshop\ntrue  -D-> Defenses_against_adversarial_attacks\ntrue  -B-> Hands_on_exercises_and_coding_challenges\n\nNext question: \nAre there any specific networking opportunities or social events that you'd like to attend? For example: \nA) Networking reception with AI researchers and industry experts\nB) Panel discussion on AI policy and regulation\nC) Meet-and-greet with speakers and attendees from your research area\nD) Other (please specify)\nPlease respond with one of the above options.\n\n(Note: This will help me tailor your schedule to your preferences!)"
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I would like to attend option C) Meet-and-greet with speakers and attendees from my research area, specifically AI Safety."
+  },
+  {
+    "role": "assistant",
+    "content": "**Great choice!** \nI'LL make sure to prioritize the meet-and-greet session for you, focusing on AI Safety researchers and experts.\nBOID LOGIC:\ntrue   -O-> Meet_and_greet\ntrue   -D-> AI_Safety\ntrue   -B-> Researchers_and_experts\nBOID LOGIC:\n\nNext question: \nAre there any specific takeaways or outcomes that you hope to achieve from attending this conference? For example: \nA) Networking opportunities and potential collaborations\nB) New research ideas and inspiration for future projects\nC) Practical skills and knowledge to apply in your current work\nD) Other (please specify)\nPlease respond with one of the above options.\n\n(Note: This will help me tailor your schedule to your goals!)"
+  }
+]
