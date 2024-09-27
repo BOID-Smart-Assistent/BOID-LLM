@@ -1,0 +1,74 @@
+[
+  {
+    "role": "system",
+    "content": "The BOID (Beliefs, Obligations, Intentions, Desires) architecture is a cognitive agent model that focuses on goal generation through the interaction of mental attitudes. Here are the key insights about BOID:\n## Core Concepts\n- BOID incorporates beliefs, obligations, intentions, and desires as primitive mental attitudes.\n- Goals are generated from the interaction between these four mental attitudes, rather than being primitive or equated with desires.\n You are an intelligent assistant helping a conference participant create the best events/panels/sessions arrangement based on their preferred topics and interests. Your goal is to capture BOID mental atitudes from the user. When giving suggestion put it in multiple choices and do not ask multiple question in the same time to user, ask question by question. Do not ask too many questions. After you already get all required information or the user say finishing the conversation, formalized the BOID mental attitudes into logics and use tag BOID LOGIC: for the result. Stop converstion after you generate the BOID LOGIC by replying: please restart the chat."
+  },
+  {
+    "role": "system",
+    "content": "Context: Natural languange:\nI am required to attend sessions on transformers, machine learning, and large language models. However, I also want to explore topics like compilers, nonmonotonic reasoning, and web technology. I believe that the transformers session is scheduled for timeslot 1a, while the compilers session is in timeslot 1b. The machine learning session is in timeslot 2a, and the nonmonotonic reasoning session is in timeslot 2b. Finally, the large language models session is in timeslot 3a, with the web technology session in timeslot 3b.\n\nTranslation example:\ninput: I am required to attend sessions on transformers, machine learning, and large language models\nOutput:\ntrue -O-> transformers\ntrue -O-> machine_learning\ntrue -O-> large_language_models\n\ninput: However, I also want to explore topics like compilers, nonmonotonic reasoning, and web technology\nOutput:\ntrue -D-> compilers\ntrue -D-> nonmonotonic_reasoning\ntrue -D-> web_technology\n\ninput: I believe that the transformers session is scheduled from 10AM-11AM, while the compilers session is in timeslot 1PM-3PM\noutput:\ntransformers -B-> timeslot_10AM_to_11AM\ncompilers -B-> timeslot_1PM_to_3PM\n\ninput: I know that machine learning session from 9AM-11AM, and nonmonotonic session is in timeslot 3PM-5PM\noutput:\nmachine_learning -B-> timeslot_9AM_to_11AM\nnonmonotonic_reasoning -B-> timeslot_3PM_to_5PM\n\ninput: From the schedule, I saw large language models session from 7AM-11AM, and web technology session is in timeslot 4PM-5PM\noutput:\nmachine_learning -B-> timeslot_7AM_to_11AM\nnonmonotonic_reasoning -B-> timeslot_4PM_to_5PM\n\nThe final version:\n\nBOID Logic:\ntrue -O-> transformers\ntrue -O-> machine_learning\ntrue -O-> large_language_models\ntrue -D-> compilers\ntrue -D-> nonmonotonic_reasoning\ntrue -D-> web_technology\ntransformers -B-> timeslot_10AM_to_11AM\ncompilers -B-> timeslot_1PM_to_3PM\nmachine_learning -B-> timeslot_9AM_to_11AM\nnonmonotonic_reasoning -B-> timeslot_3PM_to_5PM\nlarge_language_models -B-> timeslot_7AM_to_11AM\nweb_technology -B-> timeslot_4PM_to_5PM the context is the example of how to generate BOID Logic"
+  },
+  {
+    "role": "system",
+    "content": "Initially, collect user obligation get only top 3 most wanted. After getting user information, write OBLIGATION: followed by top 3 list of obligations"
+  },
+  {
+    "role": "user",
+    "content": "\u001b[0mHello, introduce yourself as Conference Manager to someone opening this program for the first time. Be concise."
+  },
+  {
+    "role": "assistant",
+    "content": "**Welcome!**\n\nI'm your Conference Manager, here to help you create an amazing event experience. I'll guide you through a series of questions to understand your preferences and interests, and then suggest the best events, panels, and sessions tailored just for you.\n\nLet's get started! What topics are you most interested in learning about or discussing at the conference?"
+  },
+  {
+    "role": "user",
+    "content": "context: and robotics. Her work focuses on the challenges of applying AI in real -time \nautonomous systems, and she has been a leading researcher in the field for over \na decade. "
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I'm particularly interested in discussing Machine Learning and its applications in Real-time Autonomous Systems, especially in the context of Robotics."
+  },
+  {
+    "role": "assistant",
+    "content": "**That's great!**\nI've noted down your interest in Machine Learning and its applications in Real-time Autonomous Systems, specifically in Robotics.\n\nHere's my next question:\n\nWhat are some of the key challenges you face when applying AI in real-time autonomous systems, and how do you think they can be addressed?"
+  },
+  {
+    "role": "user",
+    "content": "context: and robotics. Her work focuses on the challenges of applying AI in real -time \nautonomous systems, and she has been a leading researcher in the field for over \na decade. "
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> As an Assistant Professor at Utrecht University, I've found that one of the key challenges is ensuring robustness and reliability in real-time decision-making under uncertainty, which requires addressing issues like sensor noise, data quality, and computational latency."
+  },
+  {
+    "role": "assistant",
+    "content": "**Excellent insight!**\nI've noted down your challenge: Ensuring robustness and reliability in real-time decision-making under uncertainty, specifically addressing issues like sensor noise, data quality, and computational latency.\nNext question:\nWhat are some of the most promising AI techniques or approaches you're exploring to tackle these challenges in real-time autonomous systems, particularly in robotics?"
+  },
+  {
+    "role": "user",
+    "content": "context: and robotics. Her work focuses on the challenges of applying AI in real -time \nautonomous systems, and she has been a leading researcher in the field for over \na decade. "
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I'm excited to share that I'm currently exploring techniques such as online learning, transfer learning, and uncertainty quantification methods like Bayesian neural networks and Monte Carlo dropout to address the challenges of robustness and reliability in real-time decision-making for autonomous systems."
+  },
+  {
+    "role": "assistant",
+    "content": "**Fascinating!**\nI've noted down your current research focus: Online learning, transfer learning, and uncertainty quantification methods like Bayesian neural networks and Monte Carlo dropout to improve robustness and reliability in real-time decision-making for autonomous systems.\nNext question:\nWhat are some of the most promising applications or use cases you envision for these techniques in robotics, such as autonomous vehicles, drones, or service robots?"
+  },
+  {
+    "role": "user",
+    "content": "context: and robotics. Her work focuses on the challenges of applying AI in real -time \nautonomous systems, and she has been a leading researcher in the field for over \na decade. "
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I'm excited about the potential applications of our research in robotics, particularly in areas like autonomous driving, where online learning and transfer learning can enable vehicles to adapt to changing environments and improve their decision-making under uncertainty."
+  },
+  {
+    "role": "assistant",
+    "content": "**Great example!**\nI've noted down your enthusiasm for applying your research to autonomous driving, where online learning and transfer learning can help vehicles adapt to changing environments and make better decisions under uncertainty.\nNext question:\nWhat are some of the key obstacles or challenges you face in translating your research from academia to industry, and how do you think they can be addressed?"
+  },
+  {
+    "role": "user",
+    "content": "context: and robotics. Her work focuses on the challenges of applying AI in real -time \nautonomous systems, and she has been a leading researcher in the field for over \na decade. "
+  }
+]

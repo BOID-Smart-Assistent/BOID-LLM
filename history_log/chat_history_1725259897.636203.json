@@ -9,46 +9,38 @@
   },
   {
     "role": "assistant",
-    "content": "Welcome! I'm your Conference Manager, here to help you navigate our program and create a personalized schedule based on your interests. Please feel free to explore our topics and sessions, and let me know when you're ready to start building your agenda. I'll be happy to assist you throughout the conference."
+    "content": "Welcome! I'm your Conference Manager, here to help you create a personalized schedule based on your interests and preferences. Please feel free to explore our program, and I'll be happy to assist you in making informed decisions about which sessions to attend. Let's get started!"
   },
   {
     "role": "user",
-    "content": "AI Helper response> I'm excited to help! Let's get started by exploring the conference program together - which topic or session catches your eye first?"
+    "content": "AI Helper response> I'm Dr. Jan de Vries, an Assistant Professor at Utrecht University with a research focus on AI Safety. I'd like to explore the program and schedule sessions that align with my interests in Ethical AI, Robustness in AI systems, AI policy and regulation, Machine learning safety, and Adversarial attacks."
   },
   {
     "role": "assistant",
-    "content": "I'm glad you're excited! Before we dive into the topics, I'd like to capture some information about your preferences. Can you please tell me what type of sessions are you most interested in? For example, are you looking at:\n\nA) Technical sessions on AI and machine learning\nB) Business-focused sessions on innovation and entrepreneurship\nC) Panel discussions on industry trends and future outlooks\nD) Something else (please specify)\n\nPlease respond with the letter of your preferred option."
+    "content": "Wonderful! It's great to have you here, Dr. de Vries.\n\nI've taken note of your research focus on AI Safety, specifically in Ethical AI, Robustness in AI systems, AI policy and regulation, Machine learning safety, and Adversarial attacks. I'll make sure to suggest sessions that align with these interests.\n\nTo get started, could you please tell me which topics or areas within these categories are of most interest to you? For example, would you like to focus on:\n\nA) Ethical AI: fairness, transparency, accountability\nB) Robustness in AI systems: adversarial attacks, robust training methods\nC) AI policy and regulation: governance, legislation, international cooperation\nD) Machine learning safety: risk assessment, mitigation strategies\nE) Adversarial attacks: detection, defense mechanisms\n\nPlease select one or multiple options that resonate with your research goals."
   },
   {
     "role": "user",
-    "content": "AI Helper response> I prefer A, the technical session for AI and ML"
+    "content": "AI Helper response> I'm interested in topics B) Robustness in AI systems: adversarial attacks, robust training methods and E) Adversarial attacks: detection, defense mechanisms, as they align with my current research focus on AI Safety."
   },
   {
     "role": "assistant",
-    "content": "That's great! Technical sessions on AI and machine learning can be fascinating.\n\nTo help me better understand your interests, could you please tell me what specific areas within AI and ML interest you the most? For example:\nA) Natural Language Processing (NLP)\nB) Computer Vision\nC) Reinforcement Learning\nD) Deep Learning\nE) Other (please specify)\n\nPlease respond with the letter of your preferred option."
+    "content": "I've noted your interest in topics B) Robustness in AI systems: adversarial attacks, robust training methods and E) Adversarial attacks: detection, defense mechanisms.\n\nTo help you create a personalized schedule, I'd like to ask:\n\n1. Are there any specific types of adversarial attacks that you're interested in learning more about? For example:\n\t* White-box attacks\n\t* Black-box attacks\n\t* Transferable attacks\n\t* Physical attacks\n\nPlease select one or multiple options.\n\n(Note: This will help me suggest relevant sessions and speakers for your schedule.)"
   },
   {
     "role": "user",
-    "content": "AI Helper response> Other, I prefere Generative AI"
+    "content": "AI Helper response> I'm interested in learning more about white-box attacks, black-box attacks, and transferable attacks."
   },
   {
     "role": "assistant",
-    "content": "Generative AI is a fascinating area that has many potential applications.\n\nTo help me better understand your interests in generative AI, could you please tell me what specific aspects of it interest you the most? For example:\nA) Text generation (e.g. language models, chatbots)\nB) Image and video generation (e.g. GANs, style transfer)\nC) Audio generation (e.g. music, speech synthesis)\nD) Other  (please specify)\n\nPlease respond with the letter of your preferred option.\n\n(Note: I'll be capturing more information about your preferences to help me provide a personalized schedule for you.)"
+    "content": "I've noted your interest in white-box attacks, black-box attacks, and transferable attacks.\n\nNext question:\n\n2. Are you looking for sessions that focus on:\nA) Theoretical aspects of adversarial attacks (e.g., mathematical foundations, attack models)\nB) Practical applications of adversarial attacks (e.g., real-world examples, case studies)\nC) Defense mechanisms against adversarial attacks (e.g., detection, mitigation strategies)\n\nPlease select one or multiple options.\n\n(This will help me suggest sessions that align with your research focus and interests.)"
   },
   {
     "role": "user",
-    "content": "AI Helper response> B"
+    "content": "AI Helper response> I'm interested in both A) Theoretical aspects of adversarial attacks (e.g., mathematical foundations, attack models) and C) Defense mechanisms against adversarial attacks (e.g., detection, mitigation strategies)."
   },
   {
     "role": "assistant",
-    "content": "Image and video generation is a rapidly evolving field with many exciting applications.\n\nTo further refine my understanding of your interests, could you please tell me what specific use cases or industries interest you the most in image and video generation? For example:\n\nA) Artistic applications (e.g. art, design)\nB) Advertising and marketing\nC) Healthcare and medical imaging\nD) Entertainment and film production\nE) Other  (please specify)\n\nPlease respond with the letter of your preferred option.\n\n(Note: I'm getting closer to capturing your BOID components!)"
-  },
-  {
-    "role": "user",
-    "content": "AI Helper response> May be more about healthcare"
-  },
-  {
-    "role": "assistant",
-    "content": "Healthcare is a significant area where image and video generation can have a meaningful impact.\n\nTo further refine my understanding, could you please tell me what specific aspects of healthcare interest you the most in relation to image and video generation? For example:\nA) Medical imaging analysis  (e.g. MRI, CT scans)\nB) Disease diagnosis and detection\nC) Personalized medicine and treatment planning\nD) Patient education and communication\nE) Other   (please specify)\n\nPlease respond with the letter of your preferred option.\n\n(And don't worry, I'm almost done capturing your BOID components!)"
+    "content": "I've noted your interest in both theoretical aspects of adversarial attacks (A) and defense mechanisms against adversarial attacks (C).\n\nNext question:\n\n3. Would you like to attend sessions that focus on specific AI applications or domains, such as:\nA) Computer Vision\nB) Natural Language Processing\nC) Robotics\nD) Healthcare\nE) Finance\n\nPlease select one or multiple options.\n\n(This will help me suggest sessions that are relevant to your research focus and interests.)"
   }
 ]

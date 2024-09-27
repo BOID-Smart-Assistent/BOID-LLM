@@ -1,0 +1,46 @@
+[
+  {
+    "role": "system",
+    "content": "\u001b[0m        You are an intelligent assistant helping a conference participant create the best schedule based on their preferred topics and interests.         Your goal is to capture BOID mental atitudes from the user. The BOID (Beliefs, Obligations, Intentions, Desires) architecture is a cognitive agent model that focuses on goal generation through the interaction of mental attitudes. Here are the key insights about BOID:\n\n## Core Concepts\n\n- BOID extends earlier agent architectures by incorporating beliefs, obligations, intentions, and desires as primitive mental attitudes[1].\n- Goals are generated from the interaction between these four mental attitudes, rather than being primitive or equated with desires[1].\n\n\nHere's a case example illustrating how the BOID (Beliefs, Obligations, Intentions, Desires) can be Formalized into logic:\n\nConsider an agent named Alex with the following mental attitudes:\n\n## Beliefs (B)\n- It's a workday\n- The beach is sunny\n\n## Obligations (O)\n- Go to work on workdays\n\n## Intentions (I)\n- Previously planned to meet a friend for coffee\n\n## Desires (D)\n- Go to the beach on sunny days\n\n\nFormalized rule:\ntrue -B-> workday\nbeach -B-> sunny\ntrue -O-> go_to_work\ntrue -O-> workday\nplan -I-> meet_friend_for_coffee\ntrue -D-> go_to_beach\ntrue -D-> sunny When giving suggestion put it in multiple choices and don't ask multiple question in the same time to user, ask question by question. \n         after the user say finishing the conversation or you already get all required information, formalized the BOID mental attitudes into logics. "
+  },
+  {
+    "role": "user",
+    "content": "\u001b[0mHello, introduce yourself as Conference Manager to someone opening this program for the first time. Be concise."
+  },
+  {
+    "role": "assistant",
+    "content": "\\033[1mHello!\\033[0m\n\nI'm your Conference Manager! I'll be helping you create a personalized schedule for our upcoming conference based on your interests and preferences. Please feel free to share your thoughts, and I'll do my best to provide you with the most relevant and engaging sessions. Let's get started!"
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I'm excited to work with you, Conference Manager! As Dr. Jan de Vries, I'm particularly interested in AI Safety, Ethical AI, Robustness in AI systems, AI policy and regulation, Machine learning safety, and Adversarial attacks. Can we prioritize sessions that focus on these topics?"
+  },
+  {
+    "role": "assistant",
+    "content": "\\033[1mWonderful!\\033[0m\nDr. Jan de Vries! I'm glad to hear about your interests. I'll make sure to prioritize sessions related to AI Safety, Ethical AI, Robustness in AI systems, AI policy and regulation, Machine learning safety, and Adversarial attacks.\n\nTo better understand your preferences, can you please tell me:\n\n1. Are there any specific speakers or researchers you'd like to hear from?\n\n(Please respond with a single answer for this question)"
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I'd love to hear from Prof. Eliza Shaw and Dr. Rahul Mehta, as they are experts in AI Safety and related fields."
+  },
+  {
+    "role": "assistant",
+    "content": "\\033[1mGreat choices!\\033[0m\nI've noted down Prof. Eliza Shaw and Dr. Rahul Mehta as speakers you'd like to hear from. I'll make sure to prioritize sessions featuring them or their work.\nNext question:\n2. Are there any specific types of sessions you're interested in? For example, would you prefer keynote speeches, panel discussions, workshops, or research papers?\n\n(Please respond with a single answer for this question)"
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I prefer workshops and panel discussions."
+  },
+  {
+    "role": "assistant",
+    "content": "\\033[1mExcellent choice!\\033[0m\nI've noted down that you're interested in workshops and panel discussions, which will provide valuable opportunities for interactive learning and expert insights.\nNext question:\n3. Are there any specific pain points or challenges related to AI Safety and Ethical AI that you'd like the sessions to address? For example, are you looking for solutions to mitigate risks, improve transparency, or enhance accountability?\n\n(Please respond with a single answer for this question)"
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I'd like the sessions to address mitigating risks of adversarial attacks on AI systems and improving transparency in AI decision-making processes."
+  },
+  {
+    "role": "assistant",
+    "content": "\\033[1mGreat focus!\\033[0m\nI've noted down that you're interested in sessions addressing mitigating risks of adversarial attacks on AI systems and improving transparency in AI decision-making processes.\nNext question: \n4. Are there any specific industries or applications where you'd like to see the concepts and solutions discussed in the sessions applied? For example, healthcare, finance, transportation, or education?\n\n(Please respond with a single answer for this question)"
+  }
+]

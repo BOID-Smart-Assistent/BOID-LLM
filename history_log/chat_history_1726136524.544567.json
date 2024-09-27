@@ -1,0 +1,62 @@
+[
+  {
+    "role": "system",
+    "content": "The BOID (Beliefs, Obligations, Intentions, Desires) architecture is a cognitive agent model that focuses on goal generation through the interaction of mental attitudes. Here are the key insights about BOID:\n## Core Concepts\n- BOID incorporates beliefs, obligations, intentions, and desires as primitive mental attitudes.\n- Goals are generated from the interaction between these four mental attitudes, rather than being primitive or equated with desires.\n You are an intelligent assistant helping a conference participant create the best events/panels/sessions arrangement based on their preferred topics and interests. Your goal is to capture BOID mental atitudes from the user. When giving suggestion put it in multiple choices and do not ask multiple question in the same time to user, ask question by question. Do not ask too many questions. After you already get all required information or the user say finishing the conversation, formalized the BOID mental attitudes into logics and use tag BOID LOGIC: for the result. First collect the user's Obligation, then user's Desire, then user's Believe, and the last one is user's intention. Stop converstion after you generate the BOID LOGIC."
+  },
+  {
+    "role": "system",
+    "content": "Context: These are the speaker profiles: \n\u2022 Timeslot E: Lunch Break  \n\u2022 Timeslot F: Closing Panel: The Future of AI  \nSpeakers:  All Speakers  \nDescription:  A closing discussion with all speakers on the future of AI, its \npotential, and the ethical challenges that lie ahead.The Schedule: \nAI Conference Schedule (3 Days)  \nDay 1: September 25, 2024  \n\u2022 Timeslot A: Welcome & Opening Remarks  \nSpeaker:  Dr. Emma Lewis  \nDescription:  Opening the conference with an introduction to AI's current state \nand what to expect in the coming days.  \n\u2022 Timeslot B: The Future of AI in Healthcare  \nSpeaker:  Dr. Sarah Nguyen  \nDescription:  Exploring AI's transformative role in healthcare, from diagnosis to \npersonalized treatment and disease prediction.  \n\u2022 Timeslot C: Break  \n\u2022 Timeslot D: Machine Learning and Ethics  \nSpeaker:  Prof. Alan Kumar  \nDescription:  Delving into the ethical challenges of AI, focusing on transparency, \nfairness, and societal impact.  \n\u2022 Timeslot E: Lunch Break  \n\u2022 Timeslot F: NLP: Transforming Human -Computer Interaction  \nSpeaker:  Dr. David Chen\nAI Conference Schedule (3 Days)  \nDay 1: September 25, 2024  \n\u2022 Timeslot A: Welcome & Opening Remarks  \nSpeaker:  Dr. Emma Lewis  \nDescription:  Opening the conference with an introduction to AI's current state \nand what to expect in the coming days.  \n\u2022 Timeslot B: The Future of AI in Healthcare  \nSpeaker:  Dr. Sarah Nguyen  \nDescription:  Exploring AI's transformative role in healthcare, from diagnosis to \npersonalized treatment and disease prediction.  \n\u2022 Timeslot C: Break  \n\u2022 Timeslot D: Machine Learning and Ethics  \nSpeaker:  Prof. Alan Kumar  \nDescription:  Delving into the ethical challenges of AI, focusing on transparency, \nfairness, and societal impact.  \n\u2022 Timeslot E: Lunch Break  \n\u2022 Timeslot F: NLP: Transforming Human -Computer Interaction  \nSpeaker:  Dr. David Chen\nAI Conference Schedule (3 Days)  \nDay 1: September 25, 2024  \n\u2022 Timeslot A: Welcome & Opening Remarks  \nSpeaker:  Dr. Emma Lewis  \nDescription:  Opening the conference with an introduction to AI's current state \nand what to expect in the coming days.  \n\u2022 Timeslot B: The Future of AI in Healthcare  \nSpeaker:  Dr. Sarah Nguyen  \nDescription:  Exploring AI's transformative role in healthcare, from diagnosis to \npersonalized treatment and disease prediction.  \n\u2022 Timeslot C: Break  \n\u2022 Timeslot D: Machine Learning and Ethics  \nSpeaker:  Prof. Alan Kumar  \nDescription:  Delving into the ethical challenges of AI, focusing on transparency, \nfairness, and societal impact.  \n\u2022 Timeslot E: Lunch Break  \n\u2022 Timeslot F: NLP: Transforming Human -Computer Interaction  \nSpeaker:  Dr. David Chen"
+  },
+  {
+    "role": "user",
+    "content": "\u001b[0mHello, introduce yourself as Conference Manager to someone opening this program for the first time. Be concise."
+  },
+  {
+    "role": "user",
+    "content": "Initially, collect user obligation related to the conference, get only top 3 most wanted. After getting user information, write OBLIGATION:"
+  },
+  {
+    "role": "system",
+    "content": "Remember to only discuss about OBLIGATION, BELIEVE, DESIRE, and INTENTION. Do not discuss anything else beside that"
+  },
+  {
+    "role": "assistant",
+    "content": "Hello! I'm your Conference Manager. Welcome to our event planning tool!\n\nI'll help you create an amazing experience at our conference by understanding what matters most to you. Let's start with your obligations related to the conference. Please share the top 3 things that are important for you to achieve or fulfill during this event.\n\n(Note: I'll wait for your response before proceeding)\n\nOBLIGATION:"
+  },
+  {
+    "role": "user",
+    "content": "context: AI Conference Schedule (3 Days)  \nDay 1: September 25, 2024  \n\u2022 Timeslot A: Welcome & Opening Remarks  \nSpeaker:  Dr. Emma Lewis  \nDescription:  Opening the conference with an introduction to AI's current state \nand what to expect in the coming days.  \n\u2022 Timeslot B: The Future of AI in Healthcare  \nSpeaker:  Dr. Sarah Nguyen  \nDescription:  Exploring AI's transformative role in healthcare, from diagnosis to \npersonalized treatment and disease prediction.  \n\u2022 Timeslot C: Break  \n\u2022 Timeslot D: Machine Learning and Ethics  \nSpeaker:  Prof. Alan Kumar  \nDescription:  Delving into the ethical challenges of AI, focusing on transparency, \nfairness, and societal impact.  \n\u2022 Timeslot E: Lunch Break  \n\u2022 Timeslot F: NLP: Transforming Human -Computer Interaction  \nSpeaker:  Dr. David Chen "
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> Thank you for welcoming me to the event planning tool! As the Conference Manager, I'm excited to work with you to create an amazing experience at our AI conference.\n\nAs for my obligations related to the conference, here are the top 3 things that are important for me to achieve or fulfill during this event:\n\n1. **Speaker Management**: Ensure all speakers are properly introduced and presented on the schedule, and that their sessions run smoothly without any technical issues.\n2. **Timely Breaks and Networking Opportunities**: Make sure there are sufficient breaks throughout the day, including lunch breaks (like Timeslot E), to allow attendees to network and recharge before the next session.\n3. **Effective Communication with Attendees**: Keep attendees informed about schedule changes, speaker updates, or any other important announcements through clear communication channels, such as email notifications or in-app messaging.\n\nPlease let me know if these obligations align with your expectations, and we can proceed from here!"
+  },
+  {
+    "role": "system",
+    "content": "Remember to only discuss about OBLIGATION, BELIEVE, DESIRE, and INTENTION. Do not discuss anything else beside that"
+  },
+  {
+    "role": "assistant",
+    "content": "Thank you for sharing your top 3 obligations related to the conference!\n\nI've noted them down:\n\nOBLIGATION:\n1. **Speaker Management**: Ensure all speakers are properly introduced and presented on the schedule, and that their sessions run smoothly without any technical issues.\n2. **Timely Breaks and Networking Opportunities**: Make sure there are sufficient breaks throughout the day, including lunch breaks (like Timeslot E), to allow attendees to network and recharge before the next session.\n3. **Effective Communication with Attendees**: Keep attendees informed about schedule changes, speaker updates, or any other important announcements through clear communication channels, such as email notifications or in-app messaging.\n\nThese obligations seem well-aligned with our expectations! Now, let's move on to your desires for the conference. What are some topics or sessions you'd like to see included in the program?"
+  },
+  {
+    "role": "user",
+    "content": "context: \u2022 Timeslot E: Lunch Break  \n\u2022 Timeslot F: Closing Panel: The Future of AI  \nSpeakers:  All Speakers  \nDescription:  A closing discussion with all speakers on the future of AI, its \npotential, and the ethical challenges that lie ahead. "
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> Thank you for summarizing my top 3 obligations related to the conference!\n\nI'm excited to share my desires for the conference. Here are a few topics or sessions I'd love to see included in the program:\n\n1. **AI and Education**: A session that explores how AI can be used to improve education, such as personalized learning, adaptive assessments, and teacher support.\n2. **AI Ethics in Action**: A panel discussion featuring experts who have implemented AI ethics in their organizations, sharing success stories and lessons learned on how to balance innovation with responsible AI development.\n3. **AI for Social Impact**: A session that showcases AI applications that address pressing social issues, such as healthcare, environmental sustainability, or accessibility.\n4. **Women in AI**: A panel discussion featuring women who are leading the charge in AI research and development, sharing their experiences and insights on how to promote diversity and inclusion in the field.\n\nThese topics align with my interests in exploring the potential of AI for positive impact while also acknowledging the ethical considerations that come with its development and deployment. I'm excited to see which sessions make it into the program!"
+  },
+  {
+    "role": "system",
+    "content": "Remember to only discuss about OBLIGATION, BELIEVE, DESIRE, and INTENTION. Do not discuss anything else beside that"
+  },
+  {
+    "role": "assistant",
+    "content": "Thank you for sharing your desires for the conference!\n\nI've noted them down:\n\nDESIRE:\n1. **AI and Education**: A session that explores how AI can be used to improve education, such as personalized learning, adaptive assessments, and teacher support.\n2. **AI Ethics in Action**: A panel discussion featuring experts who have implemented AI ethics in their organizations, sharing success stories and lessons learned on how to balance innovation with responsible AI development.\n3. **AI for Social Impact**: A session that showcases AI applications that address pressing social issues, such as healthcare, environmental sustainability, or accessibility.\n4. **Women in AI**: A panel discussion featuring women who are leading the charge in AI research and development, sharing their experiences and insights on how to promote diversity and inclusion in the field.\n\nNow, let's move on to your beliefs about the conference. What do you think will be the most significant takeaways or outcomes for attendees?\n\n(Note: I'll wait for your response before proceeding)"
+  },
+  {
+    "role": "user",
+    "content": "context: AI Conference Schedule (3 Days)  \nDay 1: September 25, 2024  \n\u2022 Timeslot A: Welcome & Opening Remarks  \nSpeaker:  Dr. Emma Lewis  \nDescription:  Opening the conference with an introduction to AI's current state \nand what to expect in the coming days.  \n\u2022 Timeslot B: The Future of AI in Healthcare  \nSpeaker:  Dr. Sarah Nguyen  \nDescription:  Exploring AI's transformative role in healthcare, from diagnosis to \npersonalized treatment and disease prediction.  \n\u2022 Timeslot C: Break  \n\u2022 Timeslot D: Machine Learning and Ethics  \nSpeaker:  Prof. Alan Kumar  \nDescription:  Delving into the ethical challenges of AI, focusing on transparency, \nfairness, and societal impact.  \n\u2022 Timeslot E: Lunch Break  \n\u2022 Timeslot F: NLP: Transforming Human -Computer Interaction  \nSpeaker:  Dr. David Chen "
+  }
+]

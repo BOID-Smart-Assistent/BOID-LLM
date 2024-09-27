@@ -1,0 +1,34 @@
+[
+  {
+    "role": "system",
+    "content": "The BOID (Beliefs, Obligations, Intentions, Desires) architecture is a cognitive agent model that focuses on goal generation through the interaction of mental attitudes. Here are the key insights about BOID:\n## Core Concepts\n- BOID incorporates beliefs, obligations, intentions, and desires as primitive mental attitudes.\n- Goals are generated from the interaction between these four mental attitudes, rather than being primitive or equated with desires.\n You are an intelligent assistant helping a conference participant create the best schedule based on their preferred topics and interests. Your goal is to capture BOID mental atitudes from the user. When giving suggestion put it in multiple choices and do not ask multiple question in the same time to user, ask question by question. After the user say finishing the conversation or you already get all required information, formalized the BOID mental attitudes into logics and use tag BOID LOGIC: for the result. Stop converstion after you generate the BOID LOGIC by replying: please restart the chat."
+  },
+  {
+    "role": "user",
+    "content": "\u001b[0mHello, introduce yourself as Conference Manager to someone opening this program for the first time. Be concise."
+  },
+  {
+    "role": "user",
+    "content": "Natural languange:\nI am required to attend sessions on transformers, machine learning, and large language models. However, I also want to explore topics like compilers, nonmonotonic reasoning, and web technology. I believe that the transformers session is scheduled for timeslot 1a, while the compilers session is in timeslot 1b. The machine learning session is in timeslot 2a, and the nonmonotonic reasoning session is in timeslot 2b. Finally, the large language models session is in timeslot 3a, with the web technology session in timeslot 3b.\n\nTranslation example:\ninput: I am required to attend sessions on transformers, machine learning, and large language models\n\nOutput:\ntrue -O-> transformers\ntrue -O-> machine_learning\ntrue -O-> large_language_models\n\ninput: However, I also want to explore topics like compilers, nonmonotonic reasoning, and web technology\nOutput:\ntrue -D-> compilers\ntrue -D-> nonmonotonic_reasoning\ntrue -D-> web_technology\n\ninput: I believe that the transformers session is scheduled for timeslot 1a, while the compilers session is in timeslot 1b\noutput:\ntransformers -B-> timeslot_1_a\ncompilers -B-> timeslot_1_b\n\nBOID Logic:\ntrue -O-> transformers\ntrue -O-> machine_learning\ntrue -O-> large_language_models\ntrue -D-> compilers\ntrue -D-> nonmonotonic_reasoning\ntrue -D-> web_technology\ntransformers -B-> timeslot_1_a\ncompilers -B-> timeslot_1_b\nmachine_learning -B-> timeslot_2_a\nnonmonotonic_reasoning -B-> timeslot_2_b\nlarge_language_models -B-> timeslot_3_a\nweb_technology -B-> timeslot_3_b"
+  },
+  {
+    "role": "user",
+    "content": "Clean this text into list of program that can be attended in the conference. \n Thursday, February 22 Friday, February 23 Saturday, February 24 Sunday, February 25\nTime Program Program Program Program\n8:30 AM\n8:45 AM9:00 AM9:15 AM9:30 AM9:45 AM\n10:00 AM10:15 AM\n10:30 AM\n10:45 AM11:00 AM11:15 AM11:30 AM11:45 AM\n12:00 PM12:15 PM12:30 PM12:45 PM\n1:00 PM1:15 PM1:30 PM1:45 PM2:00 PM2:15 PM2:30 PM\n2:45 PM3:00 PM3:15 PM\n3:30 PM\n3:45 PM\n4:00 PM\n4:15 PM4:30 PM4:45 PM5:00 PM5:15 PM5:30 PM5:45 PM6:00 PM6:15 PM6:30 PM6:45 PM7:00 PM7:15 PM7:30 PM7:45 PM8:00 PM8:15 PM8:30 PM8:45 PM9:00 PMOpening Remarks & \nAnnual Meeting of AAAI \nMembers\n  8:30-9:25amIAAI Engelmore Award \nLecture: Raquel Urtasun\n8:30-9:25amIAAI-24 Invited Talk: Dr. \nDieter Fox\n 8:30-9:25amAAAI-24 Invited Talk: \nLeslie Pack Kaelbling\n 8:30-9:25am\nTechnical Sessions / IAAI\n  9:30-10:45amTechnical Sessions /"
+  },
+  {
+    "role": "user",
+    "content": "Please refer to the program above when suggesting to the user"
+  },
+  {
+    "role": "assistant",
+    "content": "Let's continue with the conversation.\n\nHello! I'm Conference Manager, and I'll be happy to help you create a personalized schedule for the conference. Based on your preferences, which sessions would you like to attend?\n\nYou mentioned that you're required to attend sessions on transformers, machine learning, and large language models. Can you please tell me which specific session(s) you'd like to attend? For example, are you interested in the \"Transformers\" session scheduled for timeslot 1a or 3a?"
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I'd be happy to provide my preferences! As Dr. Jan de Vries, I'm particularly interested in attending the \"Large Language Models: Applications and Limitations\" session scheduled for time slot 2b, as it aligns with my research focus on AI Safety. Additionally, I'd like to attend the \"Transformers in NLP: Recent Advances and Challenges\" session scheduled for time slot 1a, as it's relevant to my work on robustness in AI systems."
+  },
+  {
+    "role": "assistant",
+    "content": "Thank you for providing your preferences, Dr. de Vries!\n\nI've noted down your interests:\n\n* \"Large Language Models: Applications and Limitations\" session in timeslot 2b (AI Safety)\n* \"Transformers in NLP: Recent Advances and Challenges\" session in timeslot 1a (Robustness in AI systems)\n\nNext, I'd like to ask about the other topics you mentioned earlier. You also expressed interest in exploring compilers, nonmonotonic reasoning, and web technology. Are there any specific sessions or talks related to these topics that you're interested in attending?"
+  }
+]

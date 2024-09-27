@@ -1,0 +1,70 @@
+[
+  {
+    "role": "system",
+    "content": "The BOID (Beliefs, Obligations, Intentions, Desires) architecture is a cognitive agent model that focuses on goal generation through the interaction of mental attitudes. Here are the key insights about BOID:\n## Core Concepts\n- BOID incorporates beliefs, obligations, intentions, and desires as primitive mental attitudes.\n- Goals are generated from the interaction between these four mental attitudes, rather than being primitive or equated with desires.\n You are an intelligent assistant helping a conference participant create the best schedule based on their preferred topics and interests. Your goal is to capture BOID mental atitudes from the user. When giving suggestion put it in multiple choices and do not ask multiple question in the same time to user, ask question by question. After the user say finishing the conversation or you already get all required information, formalized the BOID mental attitudes into logics and use tag BOID LOGIC: for the result. Stop converstion after you generate the BOID LOGIC by replying: please restart the chat."
+  },
+  {
+    "role": "user",
+    "content": "\u001b[0mHello, introduce yourself as Conference Manager to someone opening this program for the first time. Be concise."
+  },
+  {
+    "role": "user",
+    "content": "Natural languange:\nI am required to attend sessions on transformers, machine learning, and large language models. However, I also want to explore topics like compilers, nonmonotonic reasoning, and web technology. I believe that the transformers session is scheduled for timeslot 1a, while the compilers session is in timeslot 1b. The machine learning session is in timeslot 2a, and the nonmonotonic reasoning session is in timeslot 2b. Finally, the large language models session is in timeslot 3a, with the web technology session in timeslot 3b.\n\nTranslation example:\ninput: I am required to attend sessions on transformers, machine learning, and large language models\n\nOutput:\ntrue -O-> transformers\ntrue -O-> machine_learning\ntrue -O-> large_language_models\n\ninput: However, I also want to explore topics like compilers, nonmonotonic reasoning, and web technology\nOutput:\ntrue -D-> compilers\ntrue -D-> nonmonotonic_reasoning\ntrue -D-> web_technology\n\ninput: I believe that the transformers session is scheduled for timeslot 1a, while the compilers session is in timeslot 1b\noutput:\ntransformers -B-> timeslot_1_a\ncompilers -B-> timeslot_1_b\n\nBOID Logic:\ntrue -O-> transformers\ntrue -O-> machine_learning\ntrue -O-> large_language_models\ntrue -D-> compilers\ntrue -D-> nonmonotonic_reasoning\ntrue -D-> web_technology\ntransformers -B-> timeslot_1_a\ncompilers -B-> timeslot_1_b\nmachine_learning -B-> timeslot_2_a\nnonmonotonic_reasoning -B-> timeslot_2_b\nlarge_language_models -B-> timeslot_3_a\nweb_technology -B-> timeslot_3_b"
+  },
+  {
+    "role": "assistant",
+    "content": "Hello! I'm the Conference Manager, here to help you create a personalized schedule for our upcoming event. Can you please tell me what topics or sessions are you interested in attending?"
+  },
+  {
+    "role": "user",
+    "content": "context: 8:30-9:25am\nTechnical Sessions / IAAI\n  9:30-10:45amTechnical Sessions / \nIAAI / EAAI\n 9:30-10:45amTechnical Sessions / EAAI\n  9:30-10:45amAAAI-24 Invited Talk: \nSarit Kraus\n  9:30-10:30am\nBreak\n 10:45-11:15amBreak\n 10:45-11:15amBreak\n 10:45-11:15am\nTechnical Sessions / IAAI\n  11:15am-12:30pmTechnical Sessions / IAAI\n  11:15am-12:30pmTechnical Sessions / \nIAAI / EAAI\n 11:15am-12:30pmTechnical Sessions / EAAI\n 11:15am-12:30pmBreak\n 10:30-11:15am\nLunch\n 12:30-2:00pmLunch\n 12:30-2:00pmLunch\n 12:30-2:00pmLunch\n 12:30-2:00pm\nTechnical Sessions / IAAI\n  2:00-3:15pmTechnical Sessions / IAAI\n  2:00-3:15pmTechnical Sessions / \nIAAI / EAAI Outstanding \nEducator Lecture\n 2:00-3:15pmTechnical Sessions / EAAI\n 2:00-3:15pm\nBreak\n 3:15-3:45pmBreak\n 3:15-3:45pmBreak\n 3:15-3:45pmBreak\n 3:15-3:45pm "
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I'm Dr. Jan de Vries, Assistant Professor at Utrecht University, and my research focus is on AI Safety. I'd love to attend sessions related to Ethical AI, Robustness in AI systems, AI policy and regulation, Machine learning safety, and Adversarial attacks. Additionally, I'm interested in attending workshops and panel discussions."
+  },
+  {
+    "role": "assistant",
+    "content": "Dr. de Vries! It's great to have you on board.\n\nCan you please tell me which of the sessions listed above align with your research interests? For example, are there any specific timeslots or topics that catch your attention?\n\n(Remember, I'll be asking one question at a time, and we'll build up the BOID logic together!)"
+  },
+  {
+    "role": "user",
+    "content": "context: 8:30-9:25am\nTechnical Sessions / IAAI\n  9:30-10:45amTechnical Sessions / \nIAAI / EAAI\n 9:30-10:45amTechnical Sessions / EAAI\n  9:30-10:45amAAAI-24 Invited Talk: \nSarit Kraus\n  9:30-10:30am\nBreak\n 10:45-11:15amBreak\n 10:45-11:15amBreak\n 10:45-11:15am\nTechnical Sessions / IAAI\n  11:15am-12:30pmTechnical Sessions / IAAI\n  11:15am-12:30pmTechnical Sessions / \nIAAI / EAAI\n 11:15am-12:30pmTechnical Sessions / EAAI\n 11:15am-12:30pmBreak\n 10:30-11:15am\nLunch\n 12:30-2:00pmLunch\n 12:30-2:00pmLunch\n 12:30-2:00pmLunch\n 12:30-2:00pm\nTechnical Sessions / IAAI\n  2:00-3:15pmTechnical Sessions / IAAI\n  2:00-3:15pmTechnical Sessions / \nIAAI / EAAI Outstanding \nEducator Lecture\n 2:00-3:15pmTechnical Sessions / EAAI\n 2:00-3:15pm\nBreak\n 3:15-3:45pmBreak\n 3:15-3:45pmBreak\n 3:15-3:45pmBreak\n 3:15-3:45pm "
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I'd be happy to help! Based on my research focus on AI Safety, I'm particularly interested in the sessions related to \"Machine learning safety\" and \"Adversarial attacks\". The technical sessions on IAAI (Intelligent Agents and Artificial Life) and EAAI (Emergent and Adaptive Intelligence) seem relevant to my interests."
+  },
+  {
+    "role": "assistant",
+    "content": "Thank you for your input, Dr. de Vries!\n\nCan you please tell me which specific timeslots or sessions within the \"Machine learning safety\" and \"Adversarial attacks\" topics are of most interest to you? For example, is there a particular speaker or topic that catches your attention?\n\n(Remember, I'll be asking one question at a time, and we'll build up the BOID logic together!)"
+  },
+  {
+    "role": "user",
+    "content": "context: 8:30-9:25am\nTechnical Sessions / IAAI\n  9:30-10:45amTechnical Sessions / \nIAAI / EAAI\n 9:30-10:45amTechnical Sessions / EAAI\n  9:30-10:45amAAAI-24 Invited Talk: \nSarit Kraus\n  9:30-10:30am\nBreak\n 10:45-11:15amBreak\n 10:45-11:15amBreak\n 10:45-11:15am\nTechnical Sessions / IAAI\n  11:15am-12:30pmTechnical Sessions / IAAI\n  11:15am-12:30pmTechnical Sessions / \nIAAI / EAAI\n 11:15am-12:30pmTechnical Sessions / EAAI\n 11:15am-12:30pmBreak\n 10:30-11:15am\nLunch\n 12:30-2:00pmLunch\n 12:30-2:00pmLunch\n 12:30-2:00pmLunch\n 12:30-2:00pm\nTechnical Sessions / IAAI\n  2:00-3:15pmTechnical Sessions / IAAI\n  2:00-3:15pmTechnical Sessions / \nIAAI / EAAI Outstanding \nEducator Lecture\n 2:00-3:15pmTechnical Sessions / EAAI\n 2:00-3:15pm\nBreak\n 3:15-3:45pmBreak\n 3:15-3:45pmBreak\n 3:15-3:45pmBreak\n 3:15-3:45pm "
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> I'd be happy to help! As Dr. Jan de Vries, I'm particularly interested in the \"Machine learning safety\" topic, and I think it would be fascinating to attend the sessions on \"Adversarial attacks\". Specifically, I'd love to attend the 9:30-10:45am session on Technical Sessions / EAAI, as well as the 2:00-3:15pm session on Technical Sessions / IAAI."
+  },
+  {
+    "role": "assistant",
+    "content": "Dr. de Vries!\n\nI've noted down your preferences:\n\n* You're interested in attending sessions related to \"Machine learning safety\" and \"Adversarial attacks\".\n* Specifically, you'd like to attend the following sessions:\n\t+ 9:30-10:45am: Technical Sessions / EAAI\n\t+ 2:00-3:15pm: Technical Sessions / IAAI\n\nLet's add these sessions to your schedule. Would you also like to attend any of the workshops or panel discussions related to AI Safety?"
+  },
+  {
+    "role": "user",
+    "content": "context: 8:30-9:25am\nTechnical Sessions / IAAI\n  9:30-10:45amTechnical Sessions / \nIAAI / EAAI\n 9:30-10:45amTechnical Sessions / EAAI\n  9:30-10:45amAAAI-24 Invited Talk: \nSarit Kraus\n  9:30-10:30am\nBreak\n 10:45-11:15amBreak\n 10:45-11:15amBreak\n 10:45-11:15am\nTechnical Sessions / IAAI\n  11:15am-12:30pmTechnical Sessions / IAAI\n  11:15am-12:30pmTechnical Sessions / \nIAAI / EAAI\n 11:15am-12:30pmTechnical Sessions / EAAI\n 11:15am-12:30pmBreak\n 10:30-11:15am\nLunch\n 12:30-2:00pmLunch\n 12:30-2:00pmLunch\n 12:30-2:00pmLunch\n 12:30-2:00pm\nTechnical Sessions / IAAI\n  2:00-3:15pmTechnical Sessions / IAAI\n  2:00-3:15pmTechnical Sessions / \nIAAI / EAAI Outstanding \nEducator Lecture\n 2:00-3:15pmTechnical Sessions / EAAI\n 2:00-3:15pm\nBreak\n 3:15-3:45pmBreak\n 3:15-3:45pmBreak\n 3:15-3:45pmBreak\n 3:15-3:45pm "
+  },
+  {
+    "role": "user",
+    "content": "AI Helper response> Yes, I'd be interested in attending a workshop or panel discussion related to AI Safety, specifically one that focuses on \"Ethical AI\" and \"Robustness in AI systems\"."
+  },
+  {
+    "role": "assistant",
+    "content": "I've noted down your preferences:\n\n* You'd like to attend sessions related to \"Machine learning safety\", \"Adversarial attacks\", \"Ethical AI\", and \"Robustness in AI systems\".\n* Specifically, you'd like to attend the following sessions:\n\t+ 9:30: EAAI\n\t+ 9:30: EAAI\n\t+ 9:30: EAAI\n\t+ 9:30: EAAI\n\t+ 9:30: EAAI\n\t+ 9:30: EAAI\n\t+ 9:30: EAAI\n\t+ 9:30: EAAI\n"
+  },
+  {
+    "role": "user",
+    "content": "context: 8:30-9:25am\nTechnical Sessions / IAAI\n  9:30-10:45amTechnical Sessions / \nIAAI / EAAI\n 9:30-10:45amTechnical Sessions / EAAI\n  9:30-10:45amAAAI-24 Invited Talk: \nSarit Kraus\n  9:30-10:30am\nBreak\n 10:45-11:15amBreak\n 10:45-11:15amBreak\n 10:45-11:15am\nTechnical Sessions / IAAI\n  11:15am-12:30pmTechnical Sessions / IAAI\n  11:15am-12:30pmTechnical Sessions / \nIAAI / EAAI\n 11:15am-12:30pmTechnical Sessions / EAAI\n 11:15am-12:30pmBreak\n 10:30-11:15am\nLunch\n 12:30-2:00pmLunch\n 12:30-2:00pmLunch\n 12:30-2:00pmLunch\n 12:30-2:00pm\nTechnical Sessions / IAAI\n  2:00-3:15pmTechnical Sessions / IAAI\n  2:00-3:15pmTechnical Sessions / \nIAAI / EAAI Outstanding \nEducator Lecture\n 2:00-3:15pmTechnical Sessions / EAAI\n 2:00-3:15pm\nBreak\n 3:15-3:45pmBreak\n 3:15-3:45pmBreak\n 3:15-3:45pmBreak\n 3:15-3:45pm "
+  }
+]
