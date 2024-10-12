@@ -64,14 +64,19 @@ print("the model used for this program is: ", config['llm-api-collector']['model
 #             new_obligations=new_message['content']
 #             break
 #     return new_obligations
-def getDesire():
+def getDesire(user_input=None,debug=False):
     desires=""
     cot_desire = [   
         {"role": "system", "content": "You are an assistant that convert only like topics into desired topics."}, 
         {"role": "user", "content": f"Convert following input --> like: quantum, ethics ; dislike: robotics, education \n reference: {schedule} become this format --> DESIRES: <insert title>. Output only the requested format and exact title from reference that match with 'like' keywords."},
         {"role": "assistant", "content": "DESIRES: Quantum Computing Basics,Quantum Cryptography, Quantum Machine Learning, Quantum Algorithms, Data Ethics in AI, AI and Society"},
-        {"role": "user", "content": f"Now convert these keywords {input('like and dislike keywords:')} into desires."},
+        # {"role": "user", "content": f"Now convert these keywords {input('like and dislike keywords:')} into desires."},
         ]
+    if debug==True:
+        cot_desire.append({"role": "user", "content": f"Now convert these keywords {input('like and dislike keywords:')} into desires."})
+    else:
+        cot_desire.append({"role": "user", "content": f"Now convert these keywords {user_input} into desires."})
+        
     completion = client_collector.chat.completions.create(
         model=config['llm-api-collector']['model'],
         messages=cot_desire,
@@ -124,6 +129,23 @@ def boidGenerator(input,boid_case=boid_case,boid_output=boid_output):
 def logging(string):
     with open('./history_log/chat_history_'+timestamp+'.txt', 'a') as file:
         file.write(string+'\n')
+def process_input(input_string):
+    obligations=user_profile['participant']['obligations']
+    logging('OBLIGATION:'+obligations)
+    if len(obligations)==0:
+        return "Please add at least one obligation"
+    else:
+        desires=getDesire(user_input=input_string)
+        if len(desires)==0:
+            return "Please add at least one desire"
+        else:
+            user_context=generateUserContext(obligations,desires, schedule) 
+            if len(user_context)==0:
+                return "Please add at least one user context"
+            else:
+                oneLine_user_context=user_context.replace("\n","")
+                response=boidGenerator(oneLine_user_context)
+    return response['content']
 
 if __name__ == "__main__":
     # boidGenerator()
@@ -132,7 +154,7 @@ if __name__ == "__main__":
     if len(obligations)==0:
         print("Please add at least one obligation")
     else:
-        desires=getDesire()
+        desires=getDesire(debug=True)
         if len(desires)==0:
             print("Please add at least one desire")
         else:
