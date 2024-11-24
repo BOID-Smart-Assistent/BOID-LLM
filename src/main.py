@@ -3,17 +3,12 @@ import llm_chat_system
 
 app = Flask('llmboidapi')
 
-@app.route('/chat', methods=['GET','POST'])
-def chat():
-    if request.method == 'POST':
-        user_input = request.json.get('input')
-    elif request.method == 'GET':
-        # Retrieve input from query parameter for GET requests
-        user_input = request.args.get('input')
+@app.route('/userid/<userid>', methods=['GET'])
+def chat(userid):
     try:
-        response = llm_chat_system.process_input(user_input)
+        response = llm_chat_system.process_input(online=True, userid=userid)
     except:
-        response='ERROR: Please activate the LM studio and select the model'
+        response = 'ERROR: Please activate the LM studio and select the model'
     return jsonify({'response': response})
 
 if __name__ == '__main__':
