@@ -1,4 +1,5 @@
 from openai import OpenAI
+import subprocess
 import json
 import datetime
 # from llm_helper import llm_processor
@@ -64,39 +65,51 @@ print("the model used for this program is: ", config['llm-api-collector']['model
 #             new_obligations=new_message['content']
 #             break
 #     return new_obligations
-def getDesire(user_input=None,debug=False):
+def getDesire(user_input=None,debug=False,online=False,userid=''):
     desires=""
-    cot_desire = [   
-        {"role": "system", "content": "You are an assistant that convert only like topics into desired topics."}, 
-        {"role": "user", "content": f"Convert following input --> like: quantum, ethics ; dislike: robotics, education \n reference: {schedule} become this format --> DESIRES: <insert title>. Output only the requested format and exact title from reference that match with 'like' keywords."},
-        {"role": "assistant", "content": "DESIRES: Quantum Computing Basics,Quantum Cryptography, Quantum Machine Learning, Quantum Algorithms, Data Ethics in AI, AI and Society"},
-        # {"role": "user", "content": f"Now convert these keywords {input('like and dislike keywords:')} into desires."},
+    if online:
+        print("Online desires collection is activated")
+        url = f"http://40.68.217.27/event/api/user/{userid}"
+        curl_command = [
+            "curl", 
+            url
         ]
-    if debug==True:
-        cot_desire.append({"role": "user", "content": f"Now convert these keywords {input('like and dislike keywords:')} into desires."})
+        # Send the POST request
+        response = subprocess.run(curl_command, capture_output=True, text=True, check=True)
+        data=json.loads(response.stdout)
+        result=[item["presentation"]["name"] for item in data]
+        desires=f"DESIRES{result}"
     else:
-        cot_desire.append({"role": "user", "content": f"Now convert these keywords {user_input} into desires."})
-        
-    completion = client_collector.chat.completions.create(
-        model=config['llm-api-collector']['model'],
-        messages=cot_desire,
-        temperature=0.1,
-        stream=True,
-    )
-    new_message = {"role": "assistant", "content": ""}
-    
-    for chunk in completion:
-        if chunk.choices[0].delta.content:
-            print(chunk.choices[0].delta.content, end="", flush=True)
-            new_message["content"] += chunk.choices[0].delta.content
-    print()
-    logging(new_message['content'])
-    if 'DESIRES' in new_message['content']:
-        desires=new_message['content'].split(': ')[1]
-    else:
-        user_input=input("> ")
-        cot_desire.append({"role": "user", "content":user_input })
+        cot_desire = [   
+            {"role": "system", "content": "You are an assistant that convert only like topics into desired topics."}, 
+            {"role": "user", "content": f"Convert following input --> like: quantum, ethics ; dislike: robotics, education \n reference: {schedule} become this format --> DESIRES: <insert title>. Output only the requested format and exact title from reference that match with 'like' keywords."},
+            {"role": "assistant", "content": "DESIRES: Quantum Computing Basics,Quantum Cryptography, Quantum Machine Learning, Quantum Algorithms, Data Ethics in AI, AI and Society"},
+            # {"role": "user", "content": f"Now convert these keywords {input('like and dislike keywords:')} into desires."},
+            ]
+        if debug==True:
+            cot_desire.append({"role": "user", "content": f"Now convert these keywords {input('like and dislike keywords:')} into desires."})
+        else:
+            cot_desire.append({"role": "user", "content": f"Now convert these keywords {user_input} into desires."})
             
+        completion = client_collector.chat.completions.create(
+            model=config['llm-api-collector']['model'],
+            messages=cot_desire,
+            temperature=0.1,
+            stream=True,
+        )
+        new_message = {"role": "assistant", "content": ""}
+        
+        for chunk in completion:
+            if chunk.choices[0].delta.content:
+                print(chunk.choices[0].delta.content, end="", flush=True)
+                new_message["content"] += chunk.choices[0].delta.content
+        print()
+        logging(new_message['content'])
+        if 'DESIRES' in new_message['content']:
+            desires=new_message['content'].split(': ')[1]
+        else:
+            user_input=input("> ")
+            cot_desire.append({"role": "user", "content":user_input })            
     return desires
 def generateUserContext(obligations,desires, schedule):
     user_context="The user's obligations are: "+obligations+". The user's desires are: "+desires+". Based on the schedule, the participant believe that the schedule are this following \n "+schedule
@@ -129,13 +142,13 @@ def boidGenerator(input,boid_case=boid_case,boid_output=boid_output):
 def logging(string):
     with open('./history_log/chat_history_'+timestamp+'.txt', 'a') as file:
         file.write(string+'\n')
-def process_input(input_string):
+def process_input(input_string=None,online=False,userid=''):
     obligations=user_profile['participant']['obligations']
     logging('OBLIGATION:'+obligations)
     if len(obligations)==0:
         return "Please add at least one obligation"
     else:
-        desires=getDesire(user_input=input_string)
+        desires=getDesire(user_input=input_string,online=online,userid=userid)
         if len(desires)==0:
             return "Please add at least one desire"
         else:
@@ -154,7 +167,7 @@ if __name__ == "__main__":
     if len(obligations)==0:
         print("Please add at least one obligation")
     else:
-        desires=getDesire(debug=True)
+        desires=getDesire(debug=True,online=True,userid=1)
         if len(desires)==0:
             print("Please add at least one desire")
         else:
