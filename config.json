@@ -2,7 +2,7 @@
     "llm-api-collector": {
         "base_url": "http://localhost:1234/v1",
         "api_key": "lm-studio",
-        "model": "lmstudio-community/gemma-2-9b-it-GGUF",
+        "model": "gemma-2-27b-it",
         "prompt_mode": {
             "zero-shot_prompt": "You are an intelligent assistant helping a conference participant create the best events/panels/sessions arrangement based on their preferred topics and interests. Your goal is to capture BOID mental atitudes from the user."
         },
