@@ -16,5 +16,6 @@ if __name__ == '__main__':
     app.run(host="0.0.0.0",port=80)
     
     
-## from gitbash: curl -X POST -H "Content-Type: application/json" -d '{"input": "input: quantum"}' http://localhost:80/chat
-## from browser: http://localhost:80/chat?input='quantum'
+## from local gitbash: curl -X GET  http://localhost:80/userid/<userid>
+## from local browser: http://localhost:80/userid/<userid>
+## from public browser: http://publicip:80/userid/<userid>
