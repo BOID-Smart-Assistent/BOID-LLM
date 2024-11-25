@@ -15,5 +15,6 @@ if __name__ == '__main__':
     print('Running module:{__name__}')
     app.run(host="0.0.0.0",port=80)
     
+    
 ## from gitbash: curl -X POST -H "Content-Type: application/json" -d '{"input": "input: quantum"}' http://localhost:80/chat
 ## from browser: http://localhost:80/chat?input='quantum'
