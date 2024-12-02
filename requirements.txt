@@ -1,5 +1,6 @@
 Flask
 openai
+python-dotenv
 pypdf
 langchain
 langchain-huggingface

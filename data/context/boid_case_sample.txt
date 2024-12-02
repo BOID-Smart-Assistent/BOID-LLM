@@ -1,7 +1,5 @@
 USER_CONTEXT:
-The conference participant has some obligation to attend some sessions which are transformers, machine machine learning,
-and large language model. On the other hand the participant also has desire to explore other topics such as compilers, non-monoatomic reasoning,
-and web technology. Based on the schedule, the participant believe that the schedule are this following
+The conference participant has some obligation to attend some sessions which are transformers, machine machine learning, and large language model. On the other hand the participant also has desire to explore other topics such as compilers, non-monoatomic reasoning, and web technology. Based on the schedule, the participant believe that the schedule are this following
 {
 "day_1": {
         "timeslot_1_a":{"title": "transformers","speaker": "Dr. Alice Johnson"},

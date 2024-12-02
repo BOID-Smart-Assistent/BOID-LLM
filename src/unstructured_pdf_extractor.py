@@ -2,24 +2,20 @@ from langchain_community.document_loaders import PyPDFDirectoryLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain.schema.document import Document
 from langchain_chroma import Chroma
-import json
 from langchain_community.embeddings import HuggingFaceInferenceAPIEmbeddings
 from langchain_core.documents import Document
 import chromadb
-
-# Load the config file
-def load_config(filename):
-    with open(filename, 'r') as f:
-        config = json.load(f)
-    return config
+from dotenv import load_dotenv
+import os
+# Load .env file
+load_dotenv()
 
 # Initialize Parameters
-config = load_config('config.json')
-CHROMA_PATH = config['database']['chroma_path']
+CHROMA_PATH = os.getenv('DATABASE_CHROMA_PATH')
 DATA_PATH = "data/knowledge/unstructured_pdf"
 
 # Define Embeddings
-embeddings = HuggingFaceInferenceAPIEmbeddings(api_key=config['util']['hf_token'],model_name=config['database']['embedding_model'])
+embeddings = HuggingFaceInferenceAPIEmbeddings(api_key=os.getenv('UTIL_HF_TOKEN'),model_name=os.getenv('DATABASE_EMBEDDING_MODEL'))
 
 # Initialize Vector DB
 persistent_client = chromadb.PersistentClient()

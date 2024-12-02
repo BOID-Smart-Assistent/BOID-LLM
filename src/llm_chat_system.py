@@ -2,6 +2,8 @@ from openai import OpenAI
 import subprocess
 import json
 import datetime
+from dotenv import load_dotenv
+import os
 # from llm_helper import llm_processor
 import os
 # from unstructured_pdf_extractor import prep_knowledege
@@ -10,16 +12,12 @@ import os
 from datetime import datetime
 now = datetime.now()
 timestamp = now.strftime("%Y%m%d_%H%M%S")
-# Load the config file
-def load_config(filename):
-    with open(filename, 'r') as f:
-        config = json.load(f)
-    return config
-config = load_config('config.json')
 
+# Load .env file
+load_dotenv()
 
 # Point to the local server DATA COLLECTOR
-client_collector = OpenAI(base_url=config['llm-api-collector']['base_url'], api_key=config['llm-api-collector']['api_key'])
+client_collector = OpenAI(base_url=os.getenv('LLM_API_COLLECTOR_BASE_URL'), api_key=os.getenv('LLM_API_COLLECTOR_API_KEY'))
 
 # LLM input 
 # Load the user_profile.json, schedule.json, and rules_example.txt files
@@ -29,7 +27,9 @@ with open('./data/context/boid_case_sample.txt', 'r') as file:
     boid_case = file.read()
 with open('./data/context/boid_output_sample.txt', 'r') as file:
     boid_output = file.read()
-user_profile=load_config('./data/context/user_profile.json')
+with open('./data/context/user_profile.json', 'r') as f:
+    user_profile = json.load(f)
+# user_profile=load_config('./data/context/user_profile.json')
 
 # # Uncomment this when running the script for the first time
 # # Add all table based data into database
@@ -37,7 +37,7 @@ user_profile=load_config('./data/context/user_profile.json')
 # # Add all text based data into database
 # prep_knowledege()
 
-print("the model used for this program is: ", config['llm-api-collector']['model'])
+print("the model used for this program is: ", os.getenv('LLM_API_COLLECTOR_MODEL'))
 
 # def getObligation(existing_obligations=obligations):
 #     new_obligations=""
@@ -65,11 +65,11 @@ print("the model used for this program is: ", config['llm-api-collector']['model
 #             new_obligations=new_message['content']
 #             break
 #     return new_obligations
-def getDesire(user_input=None,debug=False,online=False,userid=''):
+def getDesire(user_input=None,debug=False,userid=''):
     desires=""
-    if online:
+    try:
         print("Online desires collection is activated")
-        url = f"http://40.68.217.27/event/api/user/{userid}"
+        url=os.getenv("BOID_WEB_COLLECTOR_BASE_URL")+userid
         curl_command = [
             "curl", 
             url
@@ -79,7 +79,8 @@ def getDesire(user_input=None,debug=False,online=False,userid=''):
         data=json.loads(response.stdout)
         result=[item["presentation"]["name"] for item in data]
         user_input=f"like:{result}"
-    else:
+    except:
+        print(f"Online data from {os.getenv('BOID_WEB_COLLECTOR_BASE_URL')+userid} is not available. Manual input is required, check the get_desire function for more information.")
         user_input=user_input
     cot_desire = [   
         {"role": "system", "content": "You are an assistant that convert only like topics into desired topics."}, 
@@ -93,7 +94,7 @@ def getDesire(user_input=None,debug=False,online=False,userid=''):
         cot_desire.append({"role": "user", "content": f"Now convert these keywords {user_input} into desires."})
         
     completion = client_collector.chat.completions.create(
-        model=config['llm-api-collector']['model'],
+        model=os.getenv('LLM_API_COLLECTOR_MODEL'),
         messages=cot_desire,
         temperature=0.1,
         stream=True,
@@ -126,7 +127,7 @@ def boidGenerator(input,boid_case=boid_case,boid_output=boid_output):
     {"role": "user", "content": input+"\n"}
     ]
     completion = client_collector.chat.completions.create(
-        model=config['llm-api-collector']['model'],
+        model=os.getenv('LLM_API_COLLECTOR_MODEL'),
         messages=fsl_boid,
         temperature=0.1,
         stream=True,
@@ -143,13 +144,13 @@ def boidGenerator(input,boid_case=boid_case,boid_output=boid_output):
 def logging(string):
     with open('./history_log/chat_history_'+timestamp+'.txt', 'a') as file:
         file.write(string+'\n')
-def process_input(input_string=None,online=False,userid=''):
+def process_input(input_string=None,userid=''):
     obligations=user_profile['participant']['obligations']
     logging('OBLIGATION:'+obligations)
     if len(obligations)==0:
         return "Please add at least one obligation"
     else:
-        desires=getDesire(user_input=input_string,online=online,userid=userid)
+        desires=getDesire(user_input=input_string,userid=userid)
         if len(desires)==0:
             return "Please add at least one desire"
         else:
