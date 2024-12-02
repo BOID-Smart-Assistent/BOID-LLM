@@ -18,13 +18,14 @@ Before running the project, ensure you have the following:
 
 2. **Configure the Model:**
    - Once the server is running, get the model name you're using.
-   - Navigate to the `llm-api-collector` directory and open the `config.json` file.
+   - Navigate to the `llm-api-collector` directory and open the `.env` file.
    - Update the `"model"` field with the name of the model you selected.
 
    ```json
-   {
-     "model": "<your-selected-model-name>"
-   }
+      LLM_API_COLLECTOR_MODEL: <your-selected-model-name>
 
-# Run the program
-python src/llm_chat_system.py
+3. **Run the program:**
+   python src/main.py
+4. **Access the API:**
+   From local gitbash: curl -X GET  http://localhost:80/userid/<userid>
+   From local browser: http://localhost:80/userid/<userid>
