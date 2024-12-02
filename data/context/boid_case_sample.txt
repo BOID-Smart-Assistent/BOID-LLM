@@ -2,16 +2,59 @@ USER_CONTEXT:
 The conference participant has some obligation to attend some sessions which are transformers, machine machine learning,
 and large language model. On the other hand the participant also has desire to explore other topics such as compilers, non-monoatomic reasoning,
 and web technology. Based on the schedule, the participant believe that the schedule are this following
-{
-"day_1": {
-        "timeslot_1_a":{"title": "transformers","speaker": "Dr. Alice Johnson"},
-        "timeslot_1_b":{"title": "compilers","speaker": "Prof. Brian Lee"},
-        "timeslot_2_a":{"title": "machine learning","speaker": "Dr. Catherine Miller"},
-        "timeslot_2_b": {"title": "non-monotonic reasoning","speaker": "Mr. David Green"}
-        },
-"day_2": {
-        "timeslot_3_a": {"title": "large language model","speaker": "Dr. Alice Johnson"
-        "timeslot_3_b": {"title": "web technology","speaker": "Prof. Brian Lee"}
-        }
-}
+[{
+    "id": 1, // The id of the day
+    "date": "2024-11-30", // the timestamp of the day
+    "timeslots": [
+      {
+        "id": 1, // Timeslot id
+        "date": "2024-11-30T11:00:00.000Z",
+        "presentations": [
+          {
+            "id": 6,
+            "name": "Dr. Alice Johnson",
+            "topic": transformers"
+          },
+          {
+            "id": 5,
+            "name": "Prof. Brian Lee",
+            "topic": "compilers"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "date": "2024-11-30T12:00:00.000Z",
+        "presentations": [
+          {
+            "id": 8,
+            "name": "Dr. Catherine Miller",
+            "topic": "machine learning"
+          },
+          {
+            "id": 7,
+            "name": "Mr. David Green",
+            "topic": "non-monotonic reasoning"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "date": "2024-11-30T13:00:00.000Z",
+        "presentations": [
+          {
+            "id": 10,
+            "name": "Dr. Alice Johnson",
+            "topic": "large language model"
+          },
+          {
+            "id": 9,
+            "name": "web technology",
+            "topic": "Prof. Brian Lee"
+          }
+        ]
+      }
+    ]
+  },
+]
 

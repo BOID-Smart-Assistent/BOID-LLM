@@ -1,4 +1,14 @@
-[
+OBLIGATION:Machine Learning
+Since there are no "dislikes" or "none" keywords to filter out, I will assume you want me to output all the presentations that match the "like" keywords.
+
+Here is the updated output:
+
+DESIRES: 
+Quantum Computing Basics
+USER_CONTEXT:
+The user's obligations are: Machine Learning. The user's desires are: 
+Quantum Computing Basics. Based on the schedule, the participant believe that the schedule are this following 
+ [
   {
     "date": "2024-11-30",
     "timeslots": [
@@ -93,3 +103,10 @@
     ]
   }
 ]
+
+
+BOID LOGIC:
+true -O-> machine_learning
+true -D-> quantum_computing_basics
+machine_learning -B-> timeslot_1_id_1_date_2024-11-30T11:00:00.000Z_presentations_id_6_name_Prof._Brian_Lee_topic_Advanced_Machine_Learning
+quantum_computing_basics -B-> timeslot_2_id_2_date_2024-11-30T12:00:00.000Z_presentations_id_7_name_Dr._Catherine_Miller_topic_Quantum_Computing_Basics

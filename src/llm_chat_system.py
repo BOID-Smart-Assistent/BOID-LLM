@@ -21,7 +21,7 @@ config = load_config('config.json')
 # Point to the local server DATA COLLECTOR
 client_collector = OpenAI(base_url=config['llm-api-collector']['base_url'], api_key=config['llm-api-collector']['api_key'])
 
-# LLM input 
+# LLM input
 # Load the user_profile.json, schedule.json, and rules_example.txt files
 with open('./data/context/schedule.json', 'r') as file:
     schedule = file.read()
@@ -41,8 +41,8 @@ print("the model used for this program is: ", config['llm-api-collector']['model
 
 # def getObligation(existing_obligations=obligations):
 #     new_obligations=""
-#     zs_obligation = [   
-#         {"role": "system", "content": "You are an assistant that want to collect obligations from user. Be concise."}, 
+#     zs_obligation = [
+#         {"role": "system", "content": "You are an assistant that want to collect obligations from user. Be concise."},
 #         {"role": "user", "content": "Tell that this is the existing obligations: "+existing_obligations+". Ask the user if there are any other obligations. Be concise.Use this format ''' 'OBLIGATION': <insert obligation keywords> ''' to summarize the obligations at the end of the conversation when user confirm that no obligation added. No additional word beside the requested format. "},
 #         ]
 #     while True:
@@ -53,7 +53,7 @@ print("the model used for this program is: ", config['llm-api-collector']['model
 #             stream=True,
 #         )
 #         new_message = {"role": "assistant", "content": ""}
-        
+
 #         for chunk in completion:
 #             if chunk.choices[0].delta.content:
 #                 print(chunk.choices[0].delta.content, end="", flush=True)
@@ -71,7 +71,7 @@ def getDesire(user_input=None,debug=False,online=False,userid=''):
         print("Online desires collection is activated")
         url = f"http://40.68.217.27/event/api/user/{userid}"
         curl_command = [
-            "curl", 
+            "curl",
             url
         ]
         # Send the POST request
@@ -81,8 +81,8 @@ def getDesire(user_input=None,debug=False,online=False,userid=''):
         user_input=f"like:{result}"
     else:
         user_input=user_input
-    cot_desire = [   
-        {"role": "system", "content": "You are an assistant that convert only like topics into desired topics."}, 
+    cot_desire = [
+        {"role": "system", "content": "You are an assistant that convert only like topics into desired topics."},
         {"role": "user", "content": f"Convert following input --> like: quantum, ethics ; dislike: robotics, education \n reference: {schedule} become this format --> DESIRES: <insert title>. Output only the requested format and exact title from reference that match with 'like' keywords."},
         {"role": "assistant", "content": "DESIRES: Quantum Computing Basics,Quantum Cryptography, Quantum Machine Learning, Quantum Algorithms, Data Ethics in AI, AI and Society"},
         # {"role": "user", "content": f"Now convert these keywords {input('like and dislike keywords:')} into desires."},
@@ -91,7 +91,7 @@ def getDesire(user_input=None,debug=False,online=False,userid=''):
         cot_desire.append({"role": "user", "content": f"Now convert these keywords {input('like and dislike keywords:')} into desires."})
     else:
         cot_desire.append({"role": "user", "content": f"Now convert these keywords {user_input} into desires."})
-        
+
     completion = client_collector.chat.completions.create(
         model=config['llm-api-collector']['model'],
         messages=cot_desire,
@@ -99,7 +99,7 @@ def getDesire(user_input=None,debug=False,online=False,userid=''):
         stream=True,
     )
     new_message = {"role": "assistant", "content": ""}
-    
+
     for chunk in completion:
         if chunk.choices[0].delta.content:
             print(chunk.choices[0].delta.content, end="", flush=True)
@@ -110,14 +110,14 @@ def getDesire(user_input=None,debug=False,online=False,userid=''):
         desires=new_message['content'].split(': ')[1]
     else:
         user_input=input("> ")
-        cot_desire.append({"role": "user", "content":user_input })            
+        cot_desire.append({"role": "user", "content":user_input })
     return desires
 def generateUserContext(obligations,desires, schedule):
     user_context="The user's obligations are: "+obligations+". The user's desires are: "+desires+". Based on the schedule, the participant believe that the schedule are this following \n "+schedule
     logging('USER_CONTEXT:'+'\n'+user_context+'\n')
     return user_context
 def boidGenerator(input,boid_case=boid_case,boid_output=boid_output):
-    print("Generating BOID Logic...")  
+    print("Generating BOID Logic...")
     ## Few Shot Prompt to give context for BOID Logic
     fsl_boid=[
     {"role": "system", "content": "Forget about previous BOID LOGIC generation. Answer in a consistent style"},
@@ -132,7 +132,7 @@ def boidGenerator(input,boid_case=boid_case,boid_output=boid_output):
         stream=True,
     )
     new_message = {"role": "assistant", "content": ""}
-    
+
     for chunk in completion:
         if chunk.choices[0].delta.content:
             print(chunk.choices[0].delta.content, end="", flush=True)
@@ -153,7 +153,7 @@ def process_input(input_string=None,online=False,userid=''):
         if len(desires)==0:
             return "Please add at least one desire"
         else:
-            user_context=generateUserContext(obligations,desires, schedule) 
+            user_context=generateUserContext(obligations,desires, schedule)
             if len(user_context)==0:
                 return "Please add at least one user context"
             else:
@@ -172,7 +172,7 @@ if __name__ == "__main__":
         if len(desires)==0:
             print("Please add at least one desire")
         else:
-            user_context=generateUserContext(obligations,desires, schedule) 
+            user_context=generateUserContext(obligations,desires, schedule)
             print("These are the user context:\n",user_context)
             if len(user_context)==0:
                 print("Please add at least one user context")
@@ -180,7 +180,7 @@ if __name__ == "__main__":
                 oneLine_user_context=user_context.replace("\n","")
                 # print(f"This is the input for the boid generator: \n {oneLine_user_context}")
                 boidGenerator(oneLine_user_context)
-            
+
 
 
 

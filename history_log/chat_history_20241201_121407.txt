@@ -1,0 +1,586 @@
+OBLIGATION:Machine Learning
+Since there are no "dislikes" or "none" keywords to filter out, I will output all the presentations that match the "like" keywords.
+
+DESIRES: 
+Quantum Computing Basics
+Introduction to AI
+Data Science with Python
+Natural Language Processing
+USER_CONTEXT:
+The user's obligations are: Machine Learning. The user's desires are: 
+Quantum Computing Basics
+Introduction to AI
+Data Science with Python
+Natural Language Processing. Based on the schedule, the participant believe that the schedule are this following 
+ [
+  {
+    "date": "2024-11-30",
+    "timeslots": [
+      {
+        "id": 1,
+        "date": "2024-11-30T11:00:00.000Z",
+        "presentations": [
+          {
+            "id": 6,
+            "name": "Prof. Brian Lee",
+            "topic": "Advanced Machine Learning"
+          },
+          {
+            "id": 5,
+            "name": "Dr. Alice Johnson",
+            "topic": "Introduction to AI"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "date": "2024-11-30T12:00:00.000Z",
+        "presentations": [
+          {
+            "id": 8,
+            "name": "Mr. David Green",
+            "topic": "Blockchain for Beginners"
+          },
+          {
+            "id": 7,
+            "name": "Dr. Catherine Miller",
+            "topic": "Quantum Computing Basics"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "date": "2024-11-30T13:00:00.000Z",
+        "presentations": [
+          {
+            "id": 10,
+            "name": "Mr. David Green",
+            "topic": "Data Science with Python"
+          },
+          {
+            "id": 9,
+            "name": "Prof. Brian Lee",
+            "topic": "Natural Language Processing"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-12-01",
+    "timeslots": [
+      {
+        "id": 4,
+        "date": "2024-12-01T11:00:00.000Z",
+        "presentations": []
+      },
+      {
+        "id": 5,
+        "date": "2024-12-01T12:00:00.000Z",
+        "presentations": []
+      },
+      {
+        "id": 6,
+        "date": "2024-12-01T13:00:00.000Z",
+        "presentations": []
+      }
+    ]
+  },
+  {
+    "date": "2024-12-02",
+    "timeslots": [
+      {
+        "id": 7,
+        "date": "2024-12-02T11:00:00.000Z",
+        "presentations": []
+      },
+      {
+        "id": 8,
+        "date": "2024-12-02T12:00:00.000Z",
+        "presentations": []
+      },
+      {
+        "id": 9,
+        "date": "2024-12-02T13:00:00.000Z",
+        "presentations": []
+      }
+    ]
+  }
+]
+
+
+BOID LOGIC:
+true -O-> machine_learning
+true -D-> quantum_computing_basics
+true -D-> introduction_to_ai
+true -D-> data_science_with_python
+true -D-> natural_language_processing
+
+machine_learning -B-> timeslot_1_a
+quantum_computing_basics -B-> timeslot_2_a
+introduction_to_ai -B-> timeslot_1_a
+data_science_with_python -B-> timeslot_3_a
+natural_language_processing -B-> timeslot_3_a
+OBLIGATION:Machine Learning
+Since there are no "dislikes" mentioned, I will assume that the original dislikes (robotics, education) should be converted to "no desire". Here is the updated output:
+
+DESIRES: Quantum Computing Basics 
+
+Note that only one topic from the reference matches with the 'like' keywords.
+USER_CONTEXT:
+The user's obligations are: Machine Learning. The user's desires are: Quantum Computing Basics 
+
+Note that only one topic from the reference matches with the 'like' keywords.. Based on the schedule, the participant believe that the schedule are this following 
+ [
+  {
+    "date": "2024-11-30",
+    "timeslots": [
+      {
+        "id": 1,
+        "date": "2024-11-30T11:00:00.000Z",
+        "presentations": [
+          {
+            "id": 6,
+            "name": "Prof. Brian Lee",
+            "topic": "Advanced Machine Learning"
+          },
+          {
+            "id": 5,
+            "name": "Dr. Alice Johnson",
+            "topic": "Introduction to AI"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "date": "2024-11-30T12:00:00.000Z",
+        "presentations": [
+          {
+            "id": 8,
+            "name": "Mr. David Green",
+            "topic": "Blockchain for Beginners"
+          },
+          {
+            "id": 7,
+            "name": "Dr. Catherine Miller",
+            "topic": "Quantum Computing Basics"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "date": "2024-11-30T13:00:00.000Z",
+        "presentations": [
+          {
+            "id": 10,
+            "name": "Mr. David Green",
+            "topic": "Data Science with Python"
+          },
+          {
+            "id": 9,
+            "name": "Prof. Brian Lee",
+            "topic": "Natural Language Processing"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-12-01",
+    "timeslots": [
+      {
+        "id": 4,
+        "date": "2024-12-01T11:00:00.000Z",
+        "presentations": []
+      },
+      {
+        "id": 5,
+        "date": "2024-12-01T12:00:00.000Z",
+        "presentations": []
+      },
+      {
+        "id": 6,
+        "date": "2024-12-01T13:00:00.000Z",
+        "presentations": []
+      }
+    ]
+  },
+  {
+    "date": "2024-12-02",
+    "timeslots": [
+      {
+        "id": 7,
+        "date": "2024-12-02T11:00:00.000Z",
+        "presentations": []
+      },
+      {
+        "id": 8,
+        "date": "2024-12-02T12:00:00.000Z",
+        "presentations": []
+      },
+      {
+        "id": 9,
+        "date": "2024-12-02T13:00:00.000Z",
+        "presentations": []
+      }
+    ]
+  }
+]
+
+
+BOID LOGIC:
+true -O-> machine_learning
+true -D-> quantum_computing_basics
+machine_learning -B-> timeslot_1_a
+quantum_computing_basics -B-> timeslot_2_a
+OBLIGATION:Machine Learning
+Since there are no "None" keywords to convert, I'll assume you want me to remove the dislikes from the original input.
+
+DESIRES: 
+Quantum Computing Basics
+Introduction to AI
+Data Science with Python
+Natural Language Processing
+USER_CONTEXT:
+The user's obligations are: Machine Learning. The user's desires are: 
+Quantum Computing Basics
+Introduction to AI
+Data Science with Python
+Natural Language Processing. Based on the schedule, the participant believe that the schedule are this following 
+ [
+  {
+    "date": "2024-11-30",
+    "timeslots": [
+      {
+        "id": 1,
+        "date": "2024-11-30T11:00:00.000Z",
+        "presentations": [
+          {
+            "id": 6,
+            "name": "Prof. Brian Lee",
+            "topic": "Advanced Machine Learning"
+          },
+          {
+            "id": 5,
+            "name": "Dr. Alice Johnson",
+            "topic": "Introduction to AI"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "date": "2024-11-30T12:00:00.000Z",
+        "presentations": [
+          {
+            "id": 8,
+            "name": "Mr. David Green",
+            "topic": "Blockchain for Beginners"
+          },
+          {
+            "id": 7,
+            "name": "Dr. Catherine Miller",
+            "topic": "Quantum Computing Basics"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "date": "2024-11-30T13:00:00.000Z",
+        "presentations": [
+          {
+            "id": 10,
+            "name": "Mr. David Green",
+            "topic": "Data Science with Python"
+          },
+          {
+            "id": 9,
+            "name": "Prof. Brian Lee",
+            "topic": "Natural Language Processing"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-12-01",
+    "timeslots": [
+      {
+        "id": 4,
+        "date": "2024-12-01T11:00:00.000Z",
+        "presentations": []
+      },
+      {
+        "id": 5,
+        "date": "2024-12-01T12:00:00.000Z",
+        "presentations": []
+      },
+      {
+        "id": 6,
+        "date": "2024-12-01T13:00:00.000Z",
+        "presentations": []
+      }
+    ]
+  },
+  {
+    "date": "2024-12-02",
+    "timeslots": [
+      {
+        "id": 7,
+        "date": "2024-12-02T11:00:00.000Z",
+        "presentations": []
+      },
+      {
+        "id": 8,
+        "date": "2024-12-02T12:00:00.000Z",
+        "presentations": []
+      },
+      {
+        "id": 9,
+        "date": "2024-12-02T13:00:00.000Z",
+        "presentations": []
+      }
+    ]
+  }
+]
+
+
+BOID LOGIC:
+true -O-> machine_learning
+true -D-> quantum_computing_basics
+true -D-> introduction_to_ai
+true -D-> data_science_with_python
+true -D-> natural_language_processing
+
+machine_learning -B-> timeslot_1_a
+quantum_computing_basics -B-> timeslot_2_a
+introduction_to_ai -B-> timeslot_1_a
+data_science_with_python -B-> timeslot_3_a
+natural_language_processing -B-> timeslot_3_a
+OBLIGATION:Machine Learning
+Since there are no "dislikes" mentioned, I will assume that the previous output is still valid.
+
+However, if you want to remove the topics that do not match with 'like' keywords, here is the updated output:
+
+DESIRES: Quantum Computing Basics 
+
+Note that only one topic matches with the 'like' keyword "quantum".
+USER_CONTEXT:
+The user's obligations are: Machine Learning. The user's desires are: Quantum Computing Basics 
+
+Note that only one topic matches with the 'like' keyword "quantum".. Based on the schedule, the participant believe that the schedule are this following 
+ [
+  {
+    "date": "2024-11-30",
+    "timeslots": [
+      {
+        "id": 1,
+        "date": "2024-11-30T11:00:00.000Z",
+        "presentations": [
+          {
+            "id": 6,
+            "name": "Prof. Brian Lee",
+            "topic": "Advanced Machine Learning"
+          },
+          {
+            "id": 5,
+            "name": "Dr. Alice Johnson",
+            "topic": "Introduction to AI"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "date": "2024-11-30T12:00:00.000Z",
+        "presentations": [
+          {
+            "id": 8,
+            "name": "Mr. David Green",
+            "topic": "Blockchain for Beginners"
+          },
+          {
+            "id": 7,
+            "name": "Dr. Catherine Miller",
+            "topic": "Quantum Computing Basics"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "date": "2024-11-30T13:00:00.000Z",
+        "presentations": [
+          {
+            "id": 10,
+            "name": "Mr. David Green",
+            "topic": "Data Science with Python"
+          },
+          {
+            "id": 9,
+            "name": "Prof. Brian Lee",
+            "topic": "Natural Language Processing"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-12-01",
+    "timeslots": [
+      {
+        "id": 4,
+        "date": "2024-12-01T11:00:00.000Z",
+        "presentations": []
+      },
+      {
+        "id": 5,
+        "date": "2024-12-01T12:00:00.000Z",
+        "presentations": []
+      },
+      {
+        "id": 6,
+        "date": "2024-12-01T13:00:00.000Z",
+        "presentations": []
+      }
+    ]
+  },
+  {
+    "date": "2024-12-02",
+    "timeslots": [
+      {
+        "id": 7,
+        "date": "2024-12-02T11:00:00.000Z",
+        "presentations": []
+      },
+      {
+        "id": 8,
+        "date": "2024-12-02T12:00:00.000Z",
+        "presentations": []
+      },
+      {
+        "id": 9,
+        "date": "2024-12-02T13:00:00.000Z",
+        "presentations": []
+      }
+    ]
+  }
+]
+
+
+BOID LOGIC:
+true -O-> machine_learning
+true -D-> quantum_computing_basics
+machine_learning -B-> timeslot_1_a
+quantum_computing_basics -B-> timeslot_2_a
+OBLIGATION:Machine Learning
+Since there are no "dislikes" mentioned, I will assume you want to remove the topics that do not match with 'like' keywords.
+
+DESIRES: 
+Quantum Computing Basics 
+
+Note: Only one topic matches with 'like' keyword "quantum".
+USER_CONTEXT:
+The user's obligations are: Machine Learning. The user's desires are: 
+Quantum Computing Basics 
+
+Note. Based on the schedule, the participant believe that the schedule are this following 
+ [
+  {
+    "date": "2024-11-30",
+    "timeslots": [
+      {
+        "id": 1,
+        "date": "2024-11-30T11:00:00.000Z",
+        "presentations": [
+          {
+            "id": 6,
+            "name": "Prof. Brian Lee",
+            "topic": "Advanced Machine Learning"
+          },
+          {
+            "id": 5,
+            "name": "Dr. Alice Johnson",
+            "topic": "Introduction to AI"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "date": "2024-11-30T12:00:00.000Z",
+        "presentations": [
+          {
+            "id": 8,
+            "name": "Mr. David Green",
+            "topic": "Blockchain for Beginners"
+          },
+          {
+            "id": 7,
+            "name": "Dr. Catherine Miller",
+            "topic": "Quantum Computing Basics"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "date": "2024-11-30T13:00:00.000Z",
+        "presentations": [
+          {
+            "id": 10,
+            "name": "Mr. David Green",
+            "topic": "Data Science with Python"
+          },
+          {
+            "id": 9,
+            "name": "Prof. Brian Lee",
+            "topic": "Natural Language Processing"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-12-01",
+    "timeslots": [
+      {
+        "id": 4,
+        "date": "2024-12-01T11:00:00.000Z",
+        "presentations": []
+      },
+      {
+        "id": 5,
+        "date": "2024-12-01T12:00:00.000Z",
+        "presentations": []
+      },
+      {
+        "id": 6,
+        "date": "2024-12-01T13:00:00.000Z",
+        "presentations": []
+      }
+    ]
+  },
+  {
+    "date": "2024-12-02",
+    "timeslots": [
+      {
+        "id": 7,
+        "date": "2024-12-02T11:00:00.000Z",
+        "presentations": []
+      },
+      {
+        "id": 8,
+        "date": "2024-12-02T12:00:00.000Z",
+        "presentations": []
+      },
+      {
+        "id": 9,
+        "date": "2024-12-02T13:00:00.000Z",
+        "presentations": []
+      }
+    ]
+  }
+]
+
+
+BOID LOGIC:
+true -O-> machine_learning
+true -D-> quantum_computing_basics
+machine_learning -B-> timeslot_1_a
+quantum_computing_basics -B-> timeslot_2_a
