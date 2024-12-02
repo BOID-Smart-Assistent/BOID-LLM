@@ -10,9 +10,9 @@ Before running the project, ensure you have the following:
 - A selected LLM model from LM Studio.
 - Python 3.12 installed.
 - Install the requirement
-```json
+```python
    pip install -r requirement.txt
-
+```
 ### Steps
 
 1. **Download LM Studio:**
@@ -24,9 +24,9 @@ Before running the project, ensure you have the following:
    - Navigate to the `llm-api-collector` directory and open the `.env` file.
    - Update the `LLM_API_COLLECTOR_MODEL` field with the name of the model you selected.
 
-   ```json
+   ```ini
       LLM_API_COLLECTOR_MODEL: <your-selected-model-name>
-
+   ```
 3. **Run the program:**
    python src/main.py
 4. **Access the API:**
