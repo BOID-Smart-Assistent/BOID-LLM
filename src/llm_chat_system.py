@@ -82,8 +82,8 @@ def getDesire(user_input=None,debug=False,userid=''):
     except:
         print(f"Online data from {os.getenv('BOID_WEB_COLLECTOR_BASE_URL')+userid} is not available. Manual input is required, check the get_desire function for more information.")
         user_input=user_input
-    cot_desire = [   
-        {"role": "system", "content": "You are an assistant that convert only like topics into desired topics."}, 
+    cot_desire = [
+        {"role": "system", "content": "You are an assistant that convert only like topics into desired topics."},
         {"role": "user", "content": f"Convert following input --> like: quantum, ethics ; dislike: robotics, education \n reference: {schedule} become this format --> DESIRES: <insert title>. Output only the requested format and exact title from reference that match with 'like' keywords."},
         {"role": "assistant", "content": "DESIRES: Quantum Computing Basics,Quantum Cryptography, Quantum Machine Learning, Quantum Algorithms, Data Ethics in AI, AI and Society"},
         # {"role": "user", "content": f"Now convert these keywords {input('like and dislike keywords:')} into desires."},

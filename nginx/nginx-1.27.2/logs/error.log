@@ -74,3 +74,10 @@
 2024/11/24 18:12:57 [notice] 6320#6928: signal process started
 2024/11/24 18:13:36 [notice] 8768#11488: signal process started
 2024/11/24 18:45:57 [alert] 12124#7100: *22533 1024 worker_connections are not enough while connecting to upstream, client: 145.38.193.28, server: 145.38.193.28, request: "GET / HTTP/1.0", upstream: "http://145.38.193.28:80/", host: "145.38.193.28"
+2024/11/24 23:38:53 [emerg] 28204#25672: CreateDirectory() "D:\MASTER STUDY-UU\Work\research assistant\Project Code\service-python\nginx\nginx-1.27.2/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2024/11/24 23:43:16 [emerg] 16768#8416: CreateDirectory() "D:\MASTER STUDY-UU\Work\research assistant\Project Code\service-python\nginx\nginx-1.27.2/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2024/11/24 23:46:22 [notice] 17788#20684: signal process started
+2024/11/24 23:46:22 [error] 17788#20684: OpenEvent("Global\ngx_reload_1472") failed (2: The system cannot find the file specified)
+2024/11/25 00:27:43 [emerg] 15260#27384: CreateDirectory() "D:\MASTER STUDY-UU\Work\research assistant\Project Code\service-python\nginx\nginx-1.27.2/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2024/11/25 00:27:44 [notice] 14008#25640: signal process started
+2024/11/25 00:27:44 [error] 14008#25640: OpenEvent("Global\ngx_reload_1472") failed (2: The system cannot find the file specified)

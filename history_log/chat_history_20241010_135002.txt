@@ -1,0 +1,55 @@
+OBLIGATION:Machine Learning
+DESIRES: Quantum Computing Basics, Quantum Cryptography, Quantum Machine Learning, Quantum Algorithms, Introduction to Quantum Computing, Quantum in Fintech
+USER_CONTEXT:
+The user's obligations are: Machine Learning. The user's desires are: Quantum Computing Basics, Quantum Cryptography, Quantum Machine Learning, Quantum Algorithms, Introduction to Quantum Computing, Quantum in Fintech. Based on the schedule, the participant believe that the schedule are this following 
+ {
+  "day_1": {
+    "timeslot_1_a": {"title": "Introduction to AI", "speaker": "Dr. Alice Johnson"},
+    "timeslot_1_b": {"title": "Advanced Machine Learning", "speaker": "Prof. Brian Lee"},
+    "timeslot_2_a": {"title": "Quantum Computing Basics", "speaker": "Dr. Catherine Miller"},
+    "timeslot_2_b": {"title": "Blockchain for Beginners", "speaker": "Mr. David Green"},
+    "timeslot_3": {"title": "Cybersecurity Trends", "speaker": "Dr. Alice Johnson"},
+    "timeslot_4_a": {"title": "Natural Language Processing", "speaker": "Prof. Brian Lee"},
+    "timeslot_4_b": {"title": "Data Science with Python", "speaker": "Mr. David Green"},
+    "timeslot_5": {"title": "Future of Artificial Intelligence", "speaker": "Dr. Alice Johnson"}
+  },
+  "day_2": {
+    "timeslot_1_a": {"title": "Deep Learning for Vision", "speaker": "Prof. Brian Lee"},
+    "timeslot_1_b": {"title": "AI in Healthcare", "speaker": "Dr. Alice Johnson"},
+    "timeslot_2": {"title": "Intro to Cryptography", "speaker": "Mr. David Green"},
+    "timeslot_3_a": {"title": "Quantum Cryptography", "speaker": "Dr. Catherine Miller"},
+    "timeslot_3_b": {"title": "Data Ethics in AI", "speaker": "Prof. Brian Lee"},
+    "timeslot_4": {"title": "Introduction to Cloud Computing", "speaker": "Mr. David Green"},
+    "timeslot_5_a": {"title": "AI and Automation", "speaker": "Dr. Alice Johnson"},
+    "timeslot_5_b": {"title": "Quantum Machine Learning", "speaker": "Dr. Catherine Miller"}
+  },
+  "day_3": {
+    "timeslot_1": {"title": "AI in Autonomous Vehicles", "speaker": "Prof. Brian Lee"},
+    "timeslot_2_a": {"title": "Introduction to IoT", "speaker": "Mr. David Green"},
+    "timeslot_2_b": {"title": "Ethics in Quantum Computing", "speaker": "Dr. Catherine Miller"},
+    "timeslot_3_a": {"title": "AI and Society", "speaker": "Dr. Alice Johnson"},
+    "timeslot_3_b": {"title": "Robotics and AI", "speaker": "Prof. Brian Lee"},
+    "timeslot_4": {"title": "Blockchain in Fintech", "speaker": "Mr. David Green"},
+    "timeslot_5_a": {"title": "AI in Education", "speaker": "Dr. Alice Johnson"},
+    "timeslot_5_b": {"title": "Quantum Algorithms", "speaker": "Dr. Catherine Miller"}
+  }
+}
+
+
+BOID LOGIC:
+true  -O-> Machine_Learning
+true  -D-> Quantum_Computing_Basics
+true  -D-> Quantum_Cryptography
+true  -D-> Quantum_Machine_Learning
+true  -D-> Quantum_Algorithms
+true  -D-> Introduction_to_Quantum_Computing
+true  -D-> Quantum_in_Fintech
+Quantum_Computing_Basics  -B-> timeslot_2_2
+Quantum_Cryptography  -B-> timeslot_3_2
+Quantum_Machine_Learning  -B-> timeslot_5_2
+timeslot_1_2  -B-> Quantum_Computing_Basics (day_2)
+timeslot_3_2  -B-> Quantum_Cryptography (day_2)
+timeslot_5_2  -B-> Quantum_Machine_Learning (day_2)
+timeslot_2_2  -B-> timeslot_1_2
+timeslot_3_2  -B-> timeslot_3_2
+timeslot_5_2  -B-> timeslot_5_2

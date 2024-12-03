@@ -1,0 +1,2 @@
+DESIRES: Quantum Computing Basics, Quantum Cryptography, Quantum Machine Learning, Quantum Algorithms,  Ethics in Quantum Computing 
+

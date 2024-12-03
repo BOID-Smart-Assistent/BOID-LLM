@@ -4,8 +4,8 @@ personal_notes*
 chat_history*	
 debug.txt
 nginx.conf
-/history_log
 sanbox_api\[WILL BE DELETED\].py
 nginx/nginx-1.27.2/logs/error.log
 /nginx/nginx-1.27.2/logs
 src/__pycache__/llm_chat_system.cpython-312.pyc
+history_log/chat_history_20241202_110823.txt
