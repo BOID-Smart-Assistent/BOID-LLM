@@ -30,5 +30,7 @@ Before running the project, ensure you have the following:
 3. **Run the program:**
    python src/main.py
 4. **Access the API:**
+   
    From local gitbash: curl -X GET  http://localhost:80/userid/<userid>
+   
    From local browser: http://localhost:80/userid/<userid>
