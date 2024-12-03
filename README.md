@@ -31,9 +31,9 @@ Before running the project, ensure you have the following:
    python src/main.py
 4. **Access the API:**
    
-   From local gitbash: ```ini curl -X GET  http://localhost:<your port setting in ".env" file, default value is 80>/userid/<userid>```
+   From local gitbash: ``` curl -X GET  http://localhost:<your port setting in ".env" file, default value is 80>/userid/<userid>```
    
-   From local browser: ```ini http://localhost:<your port setting in ".env" file, default value is 80>/userid/<userid>```
+   From local browser: ``` http://localhost:<your port setting in ".env" file, default value is 80>/userid/<userid>```
 
 Environment Configuration:
 
